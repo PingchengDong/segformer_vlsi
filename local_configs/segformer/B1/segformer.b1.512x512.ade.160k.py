@@ -10,7 +10,7 @@ norm_cfg = dict(type='SyncBN', requires_grad=True)
 find_unused_parameters = True
 model = dict(
     type='EncoderDecoder',
-    pretrained='pretrained/mit_b1.pth',
+    #pretrained='pretrained/mit_b1.pth',
     backbone=dict(
         type='mit_b1',
         style='pytorch'),
@@ -28,7 +28,7 @@ model = dict(
         loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0)),
     # model training and testing settings
     train_cfg=dict(),
-    test_cfg=dict(mode='whole'))
+    test_cfg=dict(mode='slide', crop_size=(512,512),stride=(512,512)))
 
 # optimizer
 optimizer = dict(_delete_=True, type='AdamW', lr=0.00006, betas=(0.9, 0.999), weight_decay=0.01,
@@ -45,4 +45,4 @@ lr_config = dict(_delete_=True, policy='poly',
 
 
 data = dict(samples_per_gpu=2)
-evaluation = dict(interval=16000, metric='mIoU')
+evaluation = dict(interval=2000, metric='mIoU')

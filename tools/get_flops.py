@@ -9,7 +9,10 @@ import torch
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument(
+        'config',
+        default='local_configs/segformer_maxvit/B1/segformer.b1_maxvit_8winsize.512x512.ade.160k.py',
+        help='train config file path')
     parser.add_argument(
         '--shape',
         type=int,

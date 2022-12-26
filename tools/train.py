@@ -66,6 +66,7 @@ def main():
 
     cfg = Config.fromfile(args.config)
     if args.options is not None:
+        # merge several base file
         cfg.merge_from_dict(args.options)
     # set cudnn_benchmark
     if cfg.get('cudnn_benchmark', False):

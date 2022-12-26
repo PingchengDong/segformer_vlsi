@@ -72,7 +72,7 @@ class Attention(nn.Module):
         self.proj_drop = nn.Dropout(proj_drop)
 
         self.sr_ratio = sr_ratio
-        if sr_ratio > 1:
+        if sr_ratio > 1: # the scale factor in  PVT
             self.sr = nn.Conv2d(dim, dim, kernel_size=sr_ratio, stride=sr_ratio)
             self.norm = nn.LayerNorm(dim)
 
@@ -95,7 +95,7 @@ class Attention(nn.Module):
 
     def forward(self, x, H, W):
         B, N, C = x.shape
-        q = self.q(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)
+        q = self.q(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3) # B, HW/P^2, HW, C_head
 
         if self.sr_ratio > 1:
             x_ = x.permute(0, 2, 1).reshape(B, C, H, W)
@@ -211,13 +211,13 @@ class MixVisionTransformer(nn.Module):
 
         # patch_embed
         self.patch_embed1 = OverlapPatchEmbed(img_size=img_size, patch_size=7, stride=4, in_chans=in_chans,
-                                              embed_dim=embed_dims[0])
+                                              embed_dim=embed_dims[0]) # from 224x224x3 to 56x56x64
         self.patch_embed2 = OverlapPatchEmbed(img_size=img_size // 4, patch_size=3, stride=2, in_chans=embed_dims[0],
-                                              embed_dim=embed_dims[1])
+                                              embed_dim=embed_dims[1]) # from 56x56x64 to 28x28x128
         self.patch_embed3 = OverlapPatchEmbed(img_size=img_size // 8, patch_size=3, stride=2, in_chans=embed_dims[1],
-                                              embed_dim=embed_dims[2])
+                                              embed_dim=embed_dims[2]) # from 28x28x128 to 14x14x320
         self.patch_embed4 = OverlapPatchEmbed(img_size=img_size // 16, patch_size=3, stride=2, in_chans=embed_dims[2],
-                                              embed_dim=embed_dims[3])
+                                              embed_dim=embed_dims[3]) # from 14x14x320 to 7x7x512
 
         # transformer encoder
         dpr = [x.item() for x in torch.linspace(0, drop_path_rate, sum(depths))]  # stochastic depth decay rule

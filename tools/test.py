@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument('checkpoint', help='checkpoint file')
     parser.add_argument(
         '--aug-test', action='store_true', help='Use Flip and Multi scale aug')
-    parser.add_argument('--out', default='work_dirs/res.pkl', help='output result file in pickle format')
+    parser.add_argument('--out', default='test_pkl/res.pkl', help='output result file in pickle format')
     parser.add_argument(
         '--format-only',
         action='store_true',

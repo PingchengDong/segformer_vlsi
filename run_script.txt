@@ -1,0 +1,39 @@
+./tools/dist_test.sh local_configs/segformer/B1/segformer.b1.512x512.ade.160k.py checkpoint_file/segformer.b1.512x512.ade.160k.pth 4
+
+# Single-gpu training
+python tools/train.py local_configs/segformer_maxvit/B1/segformer_maxvit.b1.512x512.pascal.160k.py
+
+# Multi-gpu training
+./tools/dist_train_2.sh local_configs/segformer_maxvit/B1/segformer_maxvit16.b1.512x512.pascal.160k.py 4 {PORT:-29510}
+
+# Multi-gpu training (resume)
+./tools/dist_train.sh local_configs/segformer_maxvit/B1/segformer_maxvit.b1.512x512.pascal.160k.py 4 --resume-from work_dirs/segformer_maxvit.b1.512x512.pascal.160k/iter_48000.pth
+
+# Multi-gpu training (finetune)
+./tools/dist_train_2.sh local_configs/segformer_maxvit/B1/segformer_maxvit16.b1.512x512.pascal.160k.py 4 --work-dir work_dirs/finetune --load-from pretrained/modified_mit_b1.pth
+
+# Multi-gpu testing
+./tools/dist_test.sh local_configs/segformer_maxvit/B1/segformer_maxvit.b1.512x512.pascal.160k.py \
+    work_dirs/segformer_maxvit.b1.512x512.pascal.160k/iter_4000.pth \
+    4 --out results.pkl --eval mAP
+
+
+# tt 5 cores 6rank pascal
+./tools/dist_train_ttall_5cores_6rank.sh local_configs/segformer_tensorized_maxvit/B1/segformer_tensorized.b1_ttall_5cores_6rank.512x512.pascal.160k.py 3
+
+# tt 5 cores 6rank 8win_size ade
+./tools/dist_train_ttall_5cores_6rank.sh local_configs/segformer_tensorized_maxvit/B1/segformer_tensorized.b1_ttall_5cores_6rank.512x512.ade.160k.py 4
+
+# tt 5 cores 6rank 16win_size ade
+./tools/dist_train_ttall_5cores_6rank_16win_size.sh local_configs/segformer_tensorized_maxvit/B1/segformer_tensorized.b1_ttall_5cores_6rank_16winsize.512x512.ade.160k.py 4
+
+
+# maxvit
+./tools/dist_train_maxvit.sh local_configs/segformer_maxvit/B1/segformer.b1_maxvit_8winsize.512x512.ade.160k.py 4
+
+# origin
+./tools/dist_train.sh local_configs/segformer/B1/segformer.b1.512x512.ade.160k.py 4
+
+
+# flops and parameters
+python tools/get_flops_param_thop.py local_configs/segformer_tensorized_maxvit/B1/segformer_tensorized.b1_ttall_5cores_6rank_16winsize.512x512.ade.160k.py --shape 512 512

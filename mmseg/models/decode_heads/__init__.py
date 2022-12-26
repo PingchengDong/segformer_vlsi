@@ -20,7 +20,7 @@ from .sep_aspp_head import DepthwiseSeparableASPPHead
 from .sep_fcn_head import DepthwiseSeparableFCNHead
 from .uper_head import UPerHead
 
-
+from .segformer_head_tt import SegFormerHead_TT
 from .segformer_head import SegFormerHead
 
 __all__ = [

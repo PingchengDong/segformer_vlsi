@@ -9,7 +9,8 @@ from .resnext import ResNeXt
 from .unet import UNet
 
 from .mix_transformer import *
-
+from .mix_transformer_tensorized_maxvit import *
+from .mix_transformer_maxvit import *
 __all__ = [
     'ResNet', 'ResNetV1c', 'ResNetV1d', 'ResNeXt', 'HRNet', 'FastSCNN',
     'ResNeSt', 'MobileNetV2', 'UNet', 'CGNet', 'MobileNetV3',]
