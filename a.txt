@@ -1,0 +1,122 @@
+Block0.Patchembed.layernorm_1 98304
+Block0.Patchembed.convolution 155189248
+Block0.Patchembed.layernorm_2 2097152
+Block0.shotcut_1 16384
+Block0.shotcut_2 16384
+Block0.Attention.layernorm_12097152
+Block0.Attention.linear_q 68157440
+Block0.Attention.linear_k 68157440
+Block0.Attention.linear_v 68157440
+Block0.Attention.q*k 17179869184
+Block0.Attention.softmax 805306368
+Block0.Attention.attn*v 17179869184
+Block0.Attention.linear_out 68157440
+Block0.Attention.layernorm_2 2097152
+Block0.Attention.mlp_1 272629760
+Block0.Attention.mlp_2 269484032
+Block1.shotcut_1 16384
+Block1.shotcut_2 16384
+Block1.Attention.layernorm_12097152
+Block1.Attention.linear_q 68157440
+Block1.Attention.linear_k 68157440
+Block1.Attention.linear_v 68157440
+Block1.Attention.q*k 17179869184
+Block1.Attention.softmax 805306368
+Block1.Attention.attn*v 17179869184
+Block1.Attention.linear_out 68157440
+Block1.Attention.layernorm_2 2097152
+Block1.Attention.mlp_1 272629760
+Block1.Attention.mlp_2 269484032
+Block2.Patchembed.layernorm_1 524288
+Block2.Patchembed.convolution 302514176
+Block2.Patchembed.layernorm_2 1048576
+Block2.shotcut_1 4096
+Block2.shotcut_2 4096
+Block2.Attention.layernorm_11048576
+Block2.Attention.linear_q 67633152
+Block2.Attention.linear_k 67633152
+Block2.Attention.linear_v 67633152
+Block2.Attention.q*k 2147483648
+Block2.Attention.softmax 50331648
+Block2.Attention.attn*v 2147483648
+Block2.Attention.linear_out 67633152
+Block2.Attention.layernorm_2 1048576
+Block2.Attention.mlp_1 270532608
+Block2.Attention.mlp_2 268959744
+Block3.shotcut_1 4096
+Block3.shotcut_2 4096
+Block3.Attention.layernorm_11048576
+Block3.Attention.linear_q 67633152
+Block3.Attention.linear_k 67633152
+Block3.Attention.linear_v 67633152
+Block3.Attention.q*k 2147483648
+Block3.Attention.softmax 50331648
+Block3.Attention.attn*v 2147483648
+Block3.Attention.linear_out 67633152
+Block3.Attention.layernorm_2 1048576
+Block3.Attention.mlp_1 270532608
+Block3.Attention.mlp_2 268959744
+Block4.Patchembed.layernorm_1 262144
+Block4.Patchembed.convolution 377815040
+Block4.Patchembed.layernorm_2 655360
+Block4.shotcut_1 1024
+Block4.shotcut_2 1024
+Block4.Attention.layernorm_1655360
+Block4.Attention.linear_q 105185280
+Block4.Attention.linear_k 105185280
+Block4.Attention.linear_v 105185280
+Block4.Attention.q*k 335544320
+Block4.Attention.softmax 3145728
+Block4.Attention.attn*v 335544320
+Block4.Attention.linear_out 105185280
+Block4.Attention.layernorm_2 655360
+Block4.Attention.mlp_1 420741120
+Block4.Attention.mlp_2 419758080
+Block5.shotcut_1 1024
+Block5.shotcut_2 1024
+Block5.Attention.layernorm_1655360
+Block5.Attention.linear_q 105185280
+Block5.Attention.linear_k 105185280
+Block5.Attention.linear_v 105185280
+Block5.Attention.q*k 335544320
+Block5.Attention.softmax 3145728
+Block5.Attention.attn*v 335544320
+Block5.Attention.linear_out 105185280
+Block5.Attention.layernorm_2 655360
+Block5.Attention.mlp_1 420741120
+Block5.Attention.mlp_2 419758080
+Block6.Patchembed.layernorm_1 163840
+Block6.Patchembed.convolution 377618432
+Block6.Patchembed.layernorm_2 262144
+Block6.shotcut_1 256
+Block6.shotcut_2 256
+Block6.Attention.layernorm_1262144
+Block6.Attention.linear_q 67239936
+Block6.Attention.linear_k 67239936
+Block6.Attention.linear_v 67239936
+Block6.Attention.q*k 33554432
+Block6.Attention.softmax 196608
+Block6.Attention.attn*v 33554432
+Block6.Attention.linear_out 67239936
+Block6.Attention.layernorm_2 262144
+Block6.Attention.mlp_1 268959744
+Block6.Attention.mlp_2 268566528
+Block7.shotcut_1 256
+Block7.shotcut_2 256
+Block7.Attention.layernorm_1262144
+Block7.Attention.linear_q 67239936
+Block7.Attention.linear_k 67239936
+Block7.Attention.linear_v 67239936
+Block7.Attention.q*k 33554432
+Block7.Attention.softmax 196608
+Block7.Attention.attn*v 33554432
+Block7.Attention.linear_out 67239936
+Block7.Attention.layernorm_2 262144
+Block7.Attention.mlp_1 268959744
+Block7.Attention.mlp_2 268566528
+decoder.linear_c1:33619968
+decoder.linear_c2:84148224
+decoder.linear_c3:135266304
+decoder.linear_c4:272629760
+decoder.convolution_fuse:4299161600
+decoder.convolution_pred:631603200

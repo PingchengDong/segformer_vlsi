@@ -115,7 +115,7 @@ class Attention(nn.Module):
         self.num_heads = num_heads
         head_dim = dim // num_heads
         self.scale = qk_scale or head_dim ** -0.5
-
+        self.softmax = nn.Softmax(dim=-1)
         self.q = nn.Linear(dim, dim, bias=qkv_bias)
         self.kv = nn.Linear(dim, dim * 2, bias=qkv_bias)
         self.attn_drop = nn.Dropout(attn_drop)
@@ -148,7 +148,7 @@ class Attention(nn.Module):
         k, v = kv[0], kv[1]
 
         attn = (q @ k.transpose(-2, -1)) * self.scale
-        attn = attn.softmax(dim=-1)
+        attn = self.softmax(attn)#attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
 
         x = (attn @ v).transpose(1, 2).reshape(B, N, C)
@@ -471,6 +471,15 @@ class b1_maxvit_8size(MixVisionTransformer):
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], 
             win_grid_size=[8, 8, 8, 8], 
+            drop_rate=0.0, drop_path_rate=0.1)
+
+@BACKBONES.register_module()
+class b1_maxvit_16size(MixVisionTransformer):
+    def __init__(self, **kwargs):
+        super(b1_maxvit_16size, self).__init__(
+            patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
+            qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], 
+            win_grid_size=[16, 16, 16, 16], 
             drop_rate=0.0, drop_path_rate=0.1)
 
 @BACKBONES.register_module()

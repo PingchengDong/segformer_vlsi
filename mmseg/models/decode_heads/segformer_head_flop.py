@@ -16,6 +16,7 @@ from mmseg.models.utils import *
 import attr
 
 from IPython import embed
+summary_mode=True
 class MLP(nn.Module):
     """
     Linear Embedding
@@ -27,21 +28,25 @@ class MLP(nn.Module):
         self.Cout= embed_dim
         self.proj = nn.Linear(input_dim, embed_dim)
     
-        
+    def get_flops(self,N):
+        print(f"decoder.linear_c{self.cur} {N*(self.Cin*self.Cout+self.Cout)} {self.Cin*self.Cout+self.Cout}")
+        print(f"decoder.featuremap_{self.cur} 0 {N*self.Cin}") 
     def forward(self, x):
         x = x.flatten(2).transpose(1, 2)
         _,N,_ = x.shape
+        if summary_mode:
+            self.get_flops(N)
         x = self.proj(x)
         return x
 
 
 @HEADS.register_module()
-class SegFormerHead(BaseDecodeHead):
+class SegFormerHead_Flop(BaseDecodeHead):
     """
     SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers
     """
     def __init__(self, feature_strides, **kwargs):
-        super(SegFormerHead, self).__init__(input_transform='multiple_select', **kwargs)
+        super(SegFormerHead_Flop, self).__init__(input_transform='multiple_select', **kwargs)
         assert len(feature_strides) == len(self.in_channels)
         assert min(feature_strides) == feature_strides[0]
         self.feature_strides = feature_strides
@@ -65,6 +70,9 @@ class SegFormerHead(BaseDecodeHead):
 
         self.linear_pred = nn.Conv2d(embedding_dim, self.num_classes, kernel_size=1)
 
+    def get_flops(self,H,W,C):
+        print(f"decoder.convolution_fuse {(1*1*C*4*C+C)*H*W} {1*1*C*4*C+C}")
+        print(f"decoder.convolution_pred {(1*1*C*self.num_classes+self.num_classes)*H*W} {1*1*C*self.num_classes+self.num_classes}")
          
     def forward(self, inputs):
         x = self._transform_inputs(inputs)  # len=4, 1/4,1/8,1/16,1/32
@@ -86,6 +94,9 @@ class SegFormerHead(BaseDecodeHead):
         
         _c = self.linear_fuse(torch.cat([_c4, _c3, _c2, _c1], dim=1))
         
+        if summary_mode: 
+            _,C,H,W = _c1.shape
+            self.get_flops(H,W,C)
         
         x = self.dropout(_c)
         x = self.linear_pred(x)

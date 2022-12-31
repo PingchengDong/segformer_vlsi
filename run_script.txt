@@ -29,7 +29,7 @@ python tools/train.py local_configs/segformer_maxvit/B1/segformer_maxvit.b1.512x
 
 
 # maxvit
-./tools/dist_train_maxvit.sh local_configs/segformer_maxvit/B1/segformer.b1_maxvit_8winsize.512x512.ade.160k.py 4
+./tools/dist_train_maxvit.sh local_configs/segformer_maxvit/B1/segformer.b1_maxvit_mbconv_16winsize.512x512.ade.160k.py 2
 
 # origin
 ./tools/dist_train.sh local_configs/segformer/B1/segformer.b1.512x512.ade.160k.py 4

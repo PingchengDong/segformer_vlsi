@@ -1,0 +1,1147 @@
+Layer                                              Params     Mult0Adds
+0_backbone.patch_embed1.Conv2d_proj                 9.472k   154.140672M
+1_backbone.patch_embed1.LayerNorm_norm               128.0          64.0
+2_backbone.block1.0.LayerNorm_norm1                  128.0          64.0
+3_backbone.block1.0.attn.Linear_q                    4.16k        4.096k
+4_backbone.block1.0.attn.Linear_kv                   8.32k        8.192k
+5_backbone.block1.0.attn.Dropout_attn_drop               0             0
+6_backbone.block1.0.attn.Linear_proj                 4.16k        4.096k
+7_backbone.block1.0.attn.Dropout_proj_drop               0             0
+8_backbone.block1.0.Identity_drop_path                   0             0
+9_backbone.block1.0.LayerNorm_norm2                  128.0          64.0
+10_backbone.block1.0.mlp.Linear_fc1                 16.64k       16.384k
+11_backbone.block1.0.mlp.dwconv.Conv2d_dwconv        2.56k    37.748736M
+12_backbone.block1.0.mlp.GELU_act                        0             0
+13_backbone.block1.0.mlp.Dropout_drop                    0             0
+14_backbone.block1.0.mlp.Linear_fc2                16.448k       16.384k
+15_backbone.block1.0.mlp.Dropout_drop                    0             0
+16_backbone.block1.0.Identity_drop_path                  0             0
+17_backbone.block1.1.LayerNorm_norm1                 128.0          64.0
+18_backbone.block1.1.attn.Linear_q                   4.16k        4.096k
+19_backbone.block1.1.attn.Linear_kv                  8.32k        8.192k
+20_backbone.block1.1.attn.Dropout_attn_drop              0             0
+21_backbone.block1.1.attn.Linear_proj                4.16k        4.096k
+22_backbone.block1.1.attn.Dropout_proj_drop              0             0
+23_backbone.block1.1.DropPath_drop_path                  0             0
+24_backbone.block1.1.LayerNorm_norm2                 128.0          64.0
+25_backbone.block1.1.mlp.Linear_fc1                 16.64k       16.384k
+26_backbone.block1.1.mlp.dwconv.Conv2d_dwconv        2.56k    37.748736M
+27_backbone.block1.1.mlp.GELU_act                        0             0
+28_backbone.block1.1.mlp.Dropout_drop                    0             0
+29_backbone.block1.1.mlp.Linear_fc2                16.448k       16.384k
+30_backbone.block1.1.mlp.Dropout_drop                    0             0
+31_backbone.block1.1.DropPath_drop_path                  0             0
+32_backbone.LayerNorm_norm1                          128.0          64.0
+33_backbone.patch_embed2.Conv2d_proj               73.856k   301.989888M
+34_backbone.patch_embed2.LayerNorm_norm              256.0         128.0
+35_backbone.block2.0.LayerNorm_norm1                 256.0         128.0
+36_backbone.block2.0.attn.Linear_q                 16.512k       16.384k
+37_backbone.block2.0.attn.Linear_kv                33.024k       32.768k
+38_backbone.block2.0.attn.Dropout_attn_drop              0             0
+39_backbone.block2.0.attn.Linear_proj              16.512k       16.384k
+40_backbone.block2.0.attn.Dropout_proj_drop              0             0
+41_backbone.block2.0.DropPath_drop_path                  0             0
+42_backbone.block2.0.LayerNorm_norm2                 256.0         128.0
+43_backbone.block2.0.mlp.Linear_fc1                66.048k       65.536k
+44_backbone.block2.0.mlp.dwconv.Conv2d_dwconv        5.12k    18.874368M
+45_backbone.block2.0.mlp.GELU_act                        0             0
+46_backbone.block2.0.mlp.Dropout_drop                    0             0
+47_backbone.block2.0.mlp.Linear_fc2                65.664k       65.536k
+48_backbone.block2.0.mlp.Dropout_drop                    0             0
+49_backbone.block2.0.DropPath_drop_path                  0             0
+50_backbone.block2.1.LayerNorm_norm1                 256.0         128.0
+51_backbone.block2.1.attn.Linear_q                 16.512k       16.384k
+52_backbone.block2.1.attn.Linear_kv                33.024k       32.768k
+53_backbone.block2.1.attn.Dropout_attn_drop              0             0
+54_backbone.block2.1.attn.Linear_proj              16.512k       16.384k
+55_backbone.block2.1.attn.Dropout_proj_drop              0             0
+56_backbone.block2.1.DropPath_drop_path                  0             0
+57_backbone.block2.1.LayerNorm_norm2                 256.0         128.0
+58_backbone.block2.1.mlp.Linear_fc1                66.048k       65.536k
+59_backbone.block2.1.mlp.dwconv.Conv2d_dwconv        5.12k    18.874368M
+60_backbone.block2.1.mlp.GELU_act                        0             0
+61_backbone.block2.1.mlp.Dropout_drop                    0             0
+62_backbone.block2.1.mlp.Linear_fc2                65.664k       65.536k
+63_backbone.block2.1.mlp.Dropout_drop                    0             0
+64_backbone.block2.1.DropPath_drop_path                  0             0
+65_backbone.LayerNorm_norm2                          256.0         128.0
+66_backbone.patch_embed3.Conv2d_proj               368.96k    377.48736M
+67_backbone.patch_embed3.LayerNorm_norm              640.0         320.0
+68_backbone.block3.0.LayerNorm_norm1                 640.0         320.0
+69_backbone.block3.0.attn.Linear_q                 102.72k        102.4k
+70_backbone.block3.0.attn.Linear_kv                205.44k        204.8k
+71_backbone.block3.0.attn.Dropout_attn_drop              0             0
+72_backbone.block3.0.attn.Linear_proj              102.72k        102.4k
+73_backbone.block3.0.attn.Dropout_proj_drop              0             0
+74_backbone.block3.0.DropPath_drop_path                  0             0
+75_backbone.block3.0.LayerNorm_norm2                 640.0         320.0
+76_backbone.block3.0.mlp.Linear_fc1                410.88k        409.6k
+77_backbone.block3.0.mlp.dwconv.Conv2d_dwconv        12.8k     11.79648M
+78_backbone.block3.0.mlp.GELU_act                        0             0
+79_backbone.block3.0.mlp.Dropout_drop                    0             0
+80_backbone.block3.0.mlp.Linear_fc2                409.92k        409.6k
+81_backbone.block3.0.mlp.Dropout_drop                    0             0
+82_backbone.block3.0.DropPath_drop_path                  0             0
+83_backbone.block3.1.LayerNorm_norm1                 640.0         320.0
+84_backbone.block3.1.attn.Linear_q                 102.72k        102.4k
+85_backbone.block3.1.attn.Linear_kv                205.44k        204.8k
+86_backbone.block3.1.attn.Dropout_attn_drop              0             0
+87_backbone.block3.1.attn.Linear_proj              102.72k        102.4k
+88_backbone.block3.1.attn.Dropout_proj_drop              0             0
+89_backbone.block3.1.DropPath_drop_path                  0             0
+90_backbone.block3.1.LayerNorm_norm2                 640.0         320.0
+91_backbone.block3.1.mlp.Linear_fc1                410.88k        409.6k
+92_backbone.block3.1.mlp.dwconv.Conv2d_dwconv        12.8k     11.79648M
+93_backbone.block3.1.mlp.GELU_act                        0             0
+94_backbone.block3.1.mlp.Dropout_drop                    0             0
+95_backbone.block3.1.mlp.Linear_fc2                409.92k        409.6k
+96_backbone.block3.1.mlp.Dropout_drop                    0             0
+97_backbone.block3.1.DropPath_drop_path                  0             0
+98_backbone.LayerNorm_norm3                          640.0         320.0
+99_backbone.patch_embed4.Conv2d_proj             1.475072M    377.48736M
+100_backbone.patch_embed4.LayerNorm_norm            1.024k         512.0
+101_backbone.block4.0.LayerNorm_norm1               1.024k         512.0
+102_backbone.block4.0.attn.Linear_q               262.656k      262.144k
+103_backbone.block4.0.attn.Linear_kv              525.312k      524.288k
+104_backbone.block4.0.attn.Dropout_attn_drop             0             0
+105_backbone.block4.0.attn.Linear_proj            262.656k      262.144k
+106_backbone.block4.0.attn.Dropout_proj_drop             0             0
+107_backbone.block4.0.DropPath_drop_path                 0             0
+108_backbone.block4.0.LayerNorm_norm2               1.024k         512.0
+109_backbone.block4.0.mlp.Linear_fc1             1.050624M     1.048576M
+110_backbone.block4.0.mlp.dwconv.Conv2d_dwconv      20.48k     4.718592M
+111_backbone.block4.0.mlp.GELU_act                       0             0
+112_backbone.block4.0.mlp.Dropout_drop                   0             0
+113_backbone.block4.0.mlp.Linear_fc2             1.049088M     1.048576M
+114_backbone.block4.0.mlp.Dropout_drop                   0             0
+115_backbone.block4.0.DropPath_drop_path                 0             0
+116_backbone.block4.1.LayerNorm_norm1               1.024k         512.0
+117_backbone.block4.1.attn.Linear_q               262.656k      262.144k
+118_backbone.block4.1.attn.Linear_kv              525.312k      524.288k
+119_backbone.block4.1.attn.Dropout_attn_drop             0             0
+120_backbone.block4.1.attn.Linear_proj            262.656k      262.144k
+121_backbone.block4.1.attn.Dropout_proj_drop             0             0
+122_backbone.block4.1.DropPath_drop_path                 0             0
+123_backbone.block4.1.LayerNorm_norm2               1.024k         512.0
+124_backbone.block4.1.mlp.Linear_fc1             1.050624M     1.048576M
+125_backbone.block4.1.mlp.dwconv.Conv2d_dwconv      20.48k     4.718592M
+126_backbone.block4.1.mlp.GELU_act                       0             0
+127_backbone.block4.1.mlp.Dropout_drop                   0             0
+128_backbone.block4.1.mlp.Linear_fc2             1.049088M     1.048576M
+129_backbone.block4.1.mlp.Dropout_drop                   0             0
+130_backbone.block4.1.DropPath_drop_path                 0             0
+131_backbone.LayerNorm_norm4                        1.024k         512.0
+132_decode_head.linear_c4.Linear_proj             131.328k      131.072k
+133_decode_head.linear_c3.Linear_proj              82.176k        81.92k
+134_decode_head.linear_c2.Linear_proj              33.024k       32.768k
+135_decode_head.linear_c1.Linear_proj               16.64k       16.384k
+136_decode_head.linear_fuse.Conv2d_conv           262.144k  4.294967296G
+137_decode_head.linear_fuse.SyncBatchNorm_bn         512.0         256.0
+138_decode_head.linear_fuse.ReLU_activate                0             0
+139_decode_head.Dropout2d_dropout                        0             0
+140_decode_head.Conv2d_linear_pred                  38.55k     629.1456M
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+14.199G
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+11.844M
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+11.844M
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Identity is not supported!
+[Flops]: Identity is not supported!
+[Memory]: Identity is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Identity is not supported!
+[Flops]: Identity is not supported!
+[Memory]: Identity is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: SyncBatchNorm is not supported!
+[Flops]: SyncBatchNorm is not supported!
+[Memory]: SyncBatchNorm is not supported!
+[MAdd]: Dropout2d is not supported!
+[Flops]: Dropout2d is not supported!
+[Memory]: Dropout2d is not supported!
+                               module name   input shape  output shape      params memory(MB)              MAdd            Flops  MemRead(B)  MemWrite(B) duration[%]    MemR+W(B)
+0               backbone.patch_embed1.proj     3 512 512    64 128 128      9472.0       4.00     308,281,344.0    155,189,248.0   3183616.0    4194304.0      87.24%    7377920.0
+1               backbone.patch_embed1.norm     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.07%          0.0
+2               backbone.patch_embed2.proj    64 128 128   128  64  64     73856.0       2.00     603,979,776.0    302,514,176.0   4489728.0    2097152.0       0.05%    6586880.0
+3               backbone.patch_embed2.norm      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.03%          0.0
+4               backbone.patch_embed3.proj   128  64  64   320  32  32    368960.0       1.25     754,974,720.0    377,815,040.0   3572992.0    1310720.0       0.05%    4883712.0
+5               backbone.patch_embed3.norm      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.03%          0.0
+6               backbone.patch_embed4.proj   320  32  32   512  16  16   1475072.0       0.50     754,974,720.0    377,618,432.0   7211008.0     524288.0       0.05%    7735296.0
+7               backbone.patch_embed4.norm       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.30%          0.0
+8                  backbone.block1.0.norm1        64  64        64  64       128.0       0.02               0.0              0.0         0.0          0.0       0.03%          0.0
+9                 backbone.block1.0.attn.q        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.13%   12648448.0
+10               backbone.block1.0.attn.kv        64  64        64 128      8320.0       0.03          16,256.0      2,097,152.0  12713984.0    8388608.0       0.78%   21102592.0
+11        backbone.block1.0.attn.attn_drop     1  64  64     1  64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.02%          0.0
+12             backbone.block1.0.attn.proj        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.03%   12648448.0
+13        backbone.block1.0.attn.proj_drop        64  64        64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.01%          0.0
+14             backbone.block1.0.drop_path     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.00%          0.0
+15                 backbone.block1.0.norm2     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.02%          0.0
+16               backbone.block1.0.mlp.fc1     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       0.32%   21038080.0
+17     backbone.block1.0.mlp.dwconv.dwconv   256 128 128   256 128 128      2560.0      16.00      75,497,472.0     41,943,040.0  16787456.0   16777216.0       1.32%   33564672.0
+18               backbone.block1.0.mlp.act     16384 256     16384 256         0.0      16.00               0.0              0.0         0.0          0.0       0.03%          0.0
+19               backbone.block1.0.mlp.fc2     16384 256     16384  64     16448.0       4.00          32,704.0         16,384.0  16843008.0    4194304.0       0.03%   21037312.0
+20              backbone.block1.0.mlp.drop     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.01%          0.0
+21                 backbone.block1.1.norm1        64  64        64  64       128.0       0.02               0.0              0.0         0.0          0.0       0.02%          0.0
+22                backbone.block1.1.attn.q        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.03%   12648448.0
+23               backbone.block1.1.attn.kv        64  64        64 128      8320.0       0.03          16,256.0      2,097,152.0  12713984.0    8388608.0       1.81%   21102592.0
+24        backbone.block1.1.attn.attn_drop     1  64  64     1  64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.01%          0.0
+25             backbone.block1.1.attn.proj        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.04%   12648448.0
+26        backbone.block1.1.attn.proj_drop        64  64        64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.01%          0.0
+27             backbone.block1.1.drop_path     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.00%          0.0
+28                 backbone.block1.1.norm2     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.03%          0.0
+29               backbone.block1.1.mlp.fc1     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       0.47%   21038080.0
+30     backbone.block1.1.mlp.dwconv.dwconv   256 128 128   256 128 128      2560.0      16.00      75,497,472.0     41,943,040.0  16787456.0   16777216.0       0.20%   33564672.0
+31               backbone.block1.1.mlp.act     16384 256     16384 256         0.0      16.00               0.0              0.0         0.0          0.0       0.02%          0.0
+32               backbone.block1.1.mlp.fc2     16384 256     16384  64     16448.0       4.00          32,704.0         16,384.0  16843008.0    4194304.0       0.03%   21037312.0
+33              backbone.block1.1.mlp.drop     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.01%          0.0
+34                          backbone.norm1     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.02%          0.0
+35                 backbone.block2.0.norm1        64 128        64 128       256.0       0.03               0.0              0.0         0.0          0.0       0.02%          0.0
+36                backbone.block2.0.attn.q        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.03%    8421376.0
+37               backbone.block2.0.attn.kv        64 128        64 256     33024.0       0.06          65,280.0      2,097,152.0  10551296.0    4194304.0       0.12%   14745600.0
+38        backbone.block2.0.attn.attn_drop     2  64  64     2  64  64         0.0       0.03               0.0              0.0         0.0          0.0       0.01%          0.0
+39             backbone.block2.0.attn.proj        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.04%    8421376.0
+40        backbone.block2.0.attn.proj_drop        64 128        64 128         0.0       0.03               0.0              0.0         0.0          0.0       0.01%          0.0
+41             backbone.block2.0.drop_path      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.00%          0.0
+42                 backbone.block2.0.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.02%          0.0
+43               backbone.block2.0.mlp.fc1      4096 128      4096 512     66048.0       8.00         130,560.0         65,536.0   2361344.0    8388608.0       0.23%   10749952.0
+44     backbone.block2.0.mlp.dwconv.dwconv   512  64  64   512  64  64      5120.0       8.00      37,748,736.0     20,971,520.0   8409088.0    8388608.0       0.12%   16797696.0
+45               backbone.block2.0.mlp.act      4096 512      4096 512         0.0       8.00               0.0              0.0         0.0          0.0       0.01%          0.0
+46               backbone.block2.0.mlp.fc2      4096 512      4096 128     65664.0       2.00         130,944.0         65,536.0   8651264.0    2097152.0       0.04%   10748416.0
+47              backbone.block2.0.mlp.drop      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.01%          0.0
+48                 backbone.block2.1.norm1        64 128        64 128       256.0       0.03               0.0              0.0         0.0          0.0       0.02%          0.0
+49                backbone.block2.1.attn.q        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.04%    8421376.0
+50               backbone.block2.1.attn.kv        64 128        64 256     33024.0       0.06          65,280.0      2,097,152.0  10551296.0    4194304.0       0.03%   14745600.0
+51        backbone.block2.1.attn.attn_drop     2  64  64     2  64  64         0.0       0.03               0.0              0.0         0.0          0.0       0.01%          0.0
+52             backbone.block2.1.attn.proj        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.03%    8421376.0
+53        backbone.block2.1.attn.proj_drop        64 128        64 128         0.0       0.03               0.0              0.0         0.0          0.0       0.01%          0.0
+54             backbone.block2.1.drop_path      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.00%          0.0
+55                 backbone.block2.1.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.02%          0.0
+56               backbone.block2.1.mlp.fc1      4096 128      4096 512     66048.0       8.00         130,560.0         65,536.0   2361344.0    8388608.0       0.03%   10749952.0
+57     backbone.block2.1.mlp.dwconv.dwconv   512  64  64   512  64  64      5120.0       8.00      37,748,736.0     20,971,520.0   8409088.0    8388608.0       0.11%   16797696.0
+58               backbone.block2.1.mlp.act      4096 512      4096 512         0.0       8.00               0.0              0.0         0.0          0.0       0.01%          0.0
+59               backbone.block2.1.mlp.fc2      4096 512      4096 128     65664.0       2.00         130,944.0         65,536.0   8651264.0    2097152.0       0.03%   10748416.0
+60              backbone.block2.1.mlp.drop      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.01%          0.0
+61                          backbone.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.02%          0.0
+62                 backbone.block3.0.norm1        64 320        64 320       640.0       0.08               0.0              0.0         0.0          0.0       0.02%          0.0
+63                backbone.block3.0.attn.q        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.03%    9195520.0
+64               backbone.block3.0.attn.kv        64 320        64 640    205440.0       0.16         408,960.0      3,276,800.0  14458880.0    2621440.0       0.03%   17080320.0
+65        backbone.block3.0.attn.attn_drop     5  64  64     5  64  64         0.0       0.08               0.0              0.0         0.0          0.0       0.01%          0.0
+66             backbone.block3.0.attn.proj        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.03%    9195520.0
+67        backbone.block3.0.attn.proj_drop        64 320        64 320         0.0       0.08               0.0              0.0         0.0          0.0       0.01%          0.0
+68             backbone.block3.0.drop_path      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.00%          0.0
+69                 backbone.block3.0.norm2      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.02%          0.0
+70               backbone.block3.0.mlp.fc1      1024 320     1024 1280    410880.0       5.00         817,920.0        409,600.0   2954240.0    5242880.0       0.03%    8197120.0
+71     backbone.block3.0.mlp.dwconv.dwconv  1280  32  32  1280  32  32     12800.0       5.00      23,592,960.0     13,107,200.0   5294080.0    5242880.0       0.03%   10536960.0
+72               backbone.block3.0.mlp.act     1024 1280     1024 1280         0.0       5.00               0.0              0.0         0.0          0.0       0.01%          0.0
+73               backbone.block3.0.mlp.fc2     1024 1280      1024 320    409920.0       1.25         818,880.0        409,600.0   6882560.0    1310720.0       0.10%    8193280.0
+74              backbone.block3.0.mlp.drop      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.01%          0.0
+75                 backbone.block3.1.norm1        64 320        64 320       640.0       0.08               0.0              0.0         0.0          0.0       0.03%          0.0
+76                backbone.block3.1.attn.q        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.05%    9195520.0
+77               backbone.block3.1.attn.kv        64 320        64 640    205440.0       0.16         408,960.0      3,276,800.0  14458880.0    2621440.0       0.40%   17080320.0
+78        backbone.block3.1.attn.attn_drop     5  64  64     5  64  64         0.0       0.08               0.0              0.0         0.0          0.0       0.01%          0.0
+79             backbone.block3.1.attn.proj        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.04%    9195520.0
+80        backbone.block3.1.attn.proj_drop        64 320        64 320         0.0       0.08               0.0              0.0         0.0          0.0       0.01%          0.0
+81             backbone.block3.1.drop_path      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.00%          0.0
+82                 backbone.block3.1.norm2      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.03%          0.0
+83               backbone.block3.1.mlp.fc1      1024 320     1024 1280    410880.0       5.00         817,920.0        409,600.0   2954240.0    5242880.0       0.04%    8197120.0
+84     backbone.block3.1.mlp.dwconv.dwconv  1280  32  32  1280  32  32     12800.0       5.00      23,592,960.0     13,107,200.0   5294080.0    5242880.0       0.74%   10536960.0
+85               backbone.block3.1.mlp.act     1024 1280     1024 1280         0.0       5.00               0.0              0.0         0.0          0.0       0.02%          0.0
+86               backbone.block3.1.mlp.fc2     1024 1280      1024 320    409920.0       1.25         818,880.0        409,600.0   6882560.0    1310720.0       0.04%    8193280.0
+87              backbone.block3.1.mlp.drop      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.01%          0.0
+88                          backbone.norm3      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.02%          0.0
+89                 backbone.block4.0.norm1        64 512        64 512      1024.0       0.12               0.0              0.0         0.0          0.0       0.02%          0.0
+90                backbone.block4.0.attn.q        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.03%    5251072.0
+91               backbone.block4.0.attn.kv        64 512       64 1024    525312.0       0.25       1,047,552.0      2,097,152.0   8929280.0    1048576.0       0.55%    9977856.0
+92        backbone.block4.0.attn.attn_drop     8  64  64     8  64  64         0.0       0.12               0.0              0.0         0.0          0.0       0.01%          0.0
+93             backbone.block4.0.attn.proj        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.03%    5251072.0
+94        backbone.block4.0.attn.proj_drop        64 512        64 512         0.0       0.12               0.0              0.0         0.0          0.0       0.01%          0.0
+95             backbone.block4.0.drop_path       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.00%          0.0
+96                 backbone.block4.0.norm2       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.02%          0.0
+97               backbone.block4.0.mlp.fc1       256 512      256 2048   1050624.0       2.00       2,095,104.0      1,048,576.0   4726784.0    2097152.0       0.03%    6823936.0
+98     backbone.block4.0.mlp.dwconv.dwconv  2048  16  16  2048  16  16     20480.0       2.00       9,437,184.0      5,242,880.0   2179072.0    2097152.0       0.03%    4276224.0
+99               backbone.block4.0.mlp.act      256 2048      256 2048         0.0       2.00               0.0              0.0         0.0          0.0       0.01%          0.0
+100              backbone.block4.0.mlp.fc2      256 2048       256 512   1049088.0       0.50       2,096,640.0      1,048,576.0   6293504.0     524288.0       0.04%    6817792.0
+101             backbone.block4.0.mlp.drop       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.01%          0.0
+102                backbone.block4.1.norm1        64 512        64 512      1024.0       0.12               0.0              0.0         0.0          0.0       0.02%          0.0
+103               backbone.block4.1.attn.q        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.29%    5251072.0
+104              backbone.block4.1.attn.kv        64 512       64 1024    525312.0       0.25       1,047,552.0      2,097,152.0   8929280.0    1048576.0       0.03%    9977856.0
+105       backbone.block4.1.attn.attn_drop     8  64  64     8  64  64         0.0       0.12               0.0              0.0         0.0          0.0       0.01%          0.0
+106            backbone.block4.1.attn.proj        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.03%    5251072.0
+107       backbone.block4.1.attn.proj_drop        64 512        64 512         0.0       0.12               0.0              0.0         0.0          0.0       0.01%          0.0
+108            backbone.block4.1.drop_path       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.00%          0.0
+109                backbone.block4.1.norm2       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.02%          0.0
+110              backbone.block4.1.mlp.fc1       256 512      256 2048   1050624.0       2.00       2,095,104.0      1,048,576.0   4726784.0    2097152.0       0.03%    6823936.0
+111    backbone.block4.1.mlp.dwconv.dwconv  2048  16  16  2048  16  16     20480.0       2.00       9,437,184.0      5,242,880.0   2179072.0    2097152.0       0.03%    4276224.0
+112              backbone.block4.1.mlp.act      256 2048      256 2048         0.0       2.00               0.0              0.0         0.0          0.0       0.01%          0.0
+113              backbone.block4.1.mlp.fc2      256 2048       256 512   1049088.0       0.50       2,096,640.0      1,048,576.0   6293504.0     524288.0       0.03%    6817792.0
+114             backbone.block4.1.mlp.drop       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.01%          0.0
+115                         backbone.norm4       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.02%          0.0
+116                decode_head.loss_decode     0   0   0     0   0   0         0.0       0.00               0.0              0.0         0.0          0.0       0.00%          0.0
+117                   decode_head.conv_seg     0   0   0     0   0   0         0.0       0.00               0.0              0.0         0.0          0.0       0.00%          0.0
+118                    decode_head.dropout   256 128 128   256 128 128         0.0      16.00               0.0              0.0         0.0          0.0       0.04%          0.0
+119             decode_head.linear_c4.proj       256 512       256 256    131328.0       0.25         261,888.0        131,072.0   1049600.0     262144.0       0.04%    1311744.0
+120             decode_head.linear_c3.proj      1024 320      1024 256     82176.0       1.00         163,584.0         81,920.0   1639424.0    1048576.0       0.04%    2688000.0
+121             decode_head.linear_c2.proj      4096 128      4096 256     33024.0       4.00          65,280.0         32,768.0   2229248.0    4194304.0       0.34%    6423552.0
+122             decode_head.linear_c1.proj     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       0.30%   21038080.0
+123           decode_head.linear_fuse.conv  1024 128 128   256 128 128    262144.0      16.00   8,585,740,288.0  4,294,967,296.0  68157440.0   16777216.0       0.74%   84934656.0
+124             decode_head.linear_fuse.bn   256 128 128   256 128 128       512.0      16.00               0.0              0.0         0.0          0.0       1.07%          0.0
+125       decode_head.linear_fuse.activate   256 128 128   256 128 128         0.0      16.00       4,194,304.0      4,194,304.0  16777216.0   16777216.0       0.06%   33554432.0
+126                decode_head.linear_pred   256 128 128   150 128 128     38550.0       9.38   1,258,291,200.0    631,603,200.0  16931416.0    9830400.0       0.07%   26761816.0
+total                                                                   11844950.0     369.38  12,581,975,040.0  6,351,126,528.0  16931416.0    9830400.0     100.00%  788737368.0
+==================================================================================================================================================================================
+Total params: 11,844,950
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total memory: 369.38MB
+Total MAdd: 12.58GMAdd
+Total Flops: 6.35GFlops
+Total MemR+W: 752.2MB
+
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+14.199G
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+tensor([3129344.], dtype=torch.float64)
+tensor([3129344.], dtype=torch.float64)
+tensor([1564672.], dtype=torch.float64)
+tensor([1564672.], dtype=torch.float64)
+tensor([977920.], dtype=torch.float64)
+tensor([977920.], dtype=torch.float64)
+tensor([391168.], dtype=torch.float64)
+tensor([391168.], dtype=torch.float64)
+14.211G
+==============================================================================================================
+                                                     Kernel Shape        Output Shape     Params     Mult-Adds
+Layer                                                                                                         
+0_backbone.patch_embed1.Conv2d_proj                 [3, 64, 7, 7]   [1, 64, 128, 128]     9.472k   154.140672M
+1_backbone.patch_embed1.LayerNorm_norm                       [64]      [1, 16384, 64]      128.0          64.0
+2_backbone.block1.0.LayerNorm_norm1                          [64]       [256, 64, 64]      128.0          64.0
+3_backbone.block1.0.attn.Linear_q                        [64, 64]       [256, 64, 64]      4.16k        4.096k
+4_backbone.block1.0.attn.Linear_kv                      [64, 128]      [256, 64, 128]      8.32k        8.192k
+5_backbone.block1.0.attn.Softmax_softmax                        -    [256, 1, 64, 64]          -             -
+6_backbone.block1.0.attn.Dropout_attn_drop                      -    [256, 1, 64, 64]          -             -
+7_backbone.block1.0.attn.Linear_proj                     [64, 64]       [256, 64, 64]      4.16k        4.096k
+8_backbone.block1.0.attn.Dropout_proj_drop                      -       [256, 64, 64]          -             -
+9_backbone.block1.0.Identity_drop_path                          -       [256, 64, 64]          -             -
+10_backbone.block1.0.LayerNorm_norm2                         [64]      [1, 16384, 64]      128.0          64.0
+11_backbone.block1.0.mlp.Linear_fc1                     [64, 256]     [1, 16384, 256]     16.64k       16.384k
+12_backbone.block1.0.mlp.dwconv.Conv2d_dwconv      [1, 256, 3, 3]  [1, 256, 128, 128]      2.56k    37.748736M
+13_backbone.block1.0.mlp.GELU_act                               -     [1, 16384, 256]          -             -
+14_backbone.block1.0.mlp.Dropout_drop                           -     [1, 16384, 256]          -             -
+15_backbone.block1.0.mlp.Linear_fc2                     [256, 64]      [1, 16384, 64]    16.448k       16.384k
+16_backbone.block1.0.mlp.Dropout_drop                           -      [1, 16384, 64]          -             -
+17_backbone.block1.0.Identity_drop_path                         -      [1, 16384, 64]          -             -
+18_backbone.block1.1.LayerNorm_norm1                         [64]       [256, 64, 64]      128.0          64.0
+19_backbone.block1.1.attn.Linear_q                       [64, 64]       [256, 64, 64]      4.16k        4.096k
+20_backbone.block1.1.attn.Linear_kv                     [64, 128]      [256, 64, 128]      8.32k        8.192k
+21_backbone.block1.1.attn.Softmax_softmax                       -    [256, 1, 64, 64]          -             -
+22_backbone.block1.1.attn.Dropout_attn_drop                     -    [256, 1, 64, 64]          -             -
+23_backbone.block1.1.attn.Linear_proj                    [64, 64]       [256, 64, 64]      4.16k        4.096k
+24_backbone.block1.1.attn.Dropout_proj_drop                     -       [256, 64, 64]          -             -
+25_backbone.block1.1.DropPath_drop_path                         -       [256, 64, 64]          -             -
+26_backbone.block1.1.LayerNorm_norm2                         [64]      [1, 16384, 64]      128.0          64.0
+27_backbone.block1.1.mlp.Linear_fc1                     [64, 256]     [1, 16384, 256]     16.64k       16.384k
+28_backbone.block1.1.mlp.dwconv.Conv2d_dwconv      [1, 256, 3, 3]  [1, 256, 128, 128]      2.56k    37.748736M
+29_backbone.block1.1.mlp.GELU_act                               -     [1, 16384, 256]          -             -
+30_backbone.block1.1.mlp.Dropout_drop                           -     [1, 16384, 256]          -             -
+31_backbone.block1.1.mlp.Linear_fc2                     [256, 64]      [1, 16384, 64]    16.448k       16.384k
+32_backbone.block1.1.mlp.Dropout_drop                           -      [1, 16384, 64]          -             -
+33_backbone.block1.1.DropPath_drop_path                         -      [1, 16384, 64]          -             -
+34_backbone.LayerNorm_norm1                                  [64]      [1, 16384, 64]      128.0          64.0
+35_backbone.patch_embed2.Conv2d_proj              [64, 128, 3, 3]    [1, 128, 64, 64]    73.856k   301.989888M
+36_backbone.patch_embed2.LayerNorm_norm                     [128]      [1, 4096, 128]      256.0         128.0
+37_backbone.block2.0.LayerNorm_norm1                        [128]       [64, 64, 128]      256.0         128.0
+38_backbone.block2.0.attn.Linear_q                     [128, 128]       [64, 64, 128]    16.512k       16.384k
+39_backbone.block2.0.attn.Linear_kv                    [128, 256]       [64, 64, 256]    33.024k       32.768k
+40_backbone.block2.0.attn.Softmax_softmax                       -     [64, 2, 64, 64]          -             -
+41_backbone.block2.0.attn.Dropout_attn_drop                     -     [64, 2, 64, 64]          -             -
+42_backbone.block2.0.attn.Linear_proj                  [128, 128]       [64, 64, 128]    16.512k       16.384k
+43_backbone.block2.0.attn.Dropout_proj_drop                     -       [64, 64, 128]          -             -
+44_backbone.block2.0.DropPath_drop_path                         -       [64, 64, 128]          -             -
+45_backbone.block2.0.LayerNorm_norm2                        [128]      [1, 4096, 128]      256.0         128.0
+46_backbone.block2.0.mlp.Linear_fc1                    [128, 512]      [1, 4096, 512]    66.048k       65.536k
+47_backbone.block2.0.mlp.dwconv.Conv2d_dwconv      [1, 512, 3, 3]    [1, 512, 64, 64]      5.12k    18.874368M
+48_backbone.block2.0.mlp.GELU_act                               -      [1, 4096, 512]          -             -
+49_backbone.block2.0.mlp.Dropout_drop                           -      [1, 4096, 512]          -             -
+50_backbone.block2.0.mlp.Linear_fc2                    [512, 128]      [1, 4096, 128]    65.664k       65.536k
+51_backbone.block2.0.mlp.Dropout_drop                           -      [1, 4096, 128]          -             -
+52_backbone.block2.0.DropPath_drop_path                         -      [1, 4096, 128]          -             -
+53_backbone.block2.1.LayerNorm_norm1                        [128]       [64, 64, 128]      256.0         128.0
+54_backbone.block2.1.attn.Linear_q                     [128, 128]       [64, 64, 128]    16.512k       16.384k
+55_backbone.block2.1.attn.Linear_kv                    [128, 256]       [64, 64, 256]    33.024k       32.768k
+56_backbone.block2.1.attn.Softmax_softmax                       -     [64, 2, 64, 64]          -             -
+57_backbone.block2.1.attn.Dropout_attn_drop                     -     [64, 2, 64, 64]          -             -
+58_backbone.block2.1.attn.Linear_proj                  [128, 128]       [64, 64, 128]    16.512k       16.384k
+59_backbone.block2.1.attn.Dropout_proj_drop                     -       [64, 64, 128]          -             -
+60_backbone.block2.1.DropPath_drop_path                         -       [64, 64, 128]          -             -
+61_backbone.block2.1.LayerNorm_norm2                        [128]      [1, 4096, 128]      256.0         128.0
+62_backbone.block2.1.mlp.Linear_fc1                    [128, 512]      [1, 4096, 512]    66.048k       65.536k
+63_backbone.block2.1.mlp.dwconv.Conv2d_dwconv      [1, 512, 3, 3]    [1, 512, 64, 64]      5.12k    18.874368M
+64_backbone.block2.1.mlp.GELU_act                               -      [1, 4096, 512]          -             -
+65_backbone.block2.1.mlp.Dropout_drop                           -      [1, 4096, 512]          -             -
+66_backbone.block2.1.mlp.Linear_fc2                    [512, 128]      [1, 4096, 128]    65.664k       65.536k
+67_backbone.block2.1.mlp.Dropout_drop                           -      [1, 4096, 128]          -             -
+68_backbone.block2.1.DropPath_drop_path                         -      [1, 4096, 128]          -             -
+69_backbone.LayerNorm_norm2                                 [128]      [1, 4096, 128]      256.0         128.0
+70_backbone.patch_embed3.Conv2d_proj             [128, 320, 3, 3]    [1, 320, 32, 32]    368.96k    377.48736M
+71_backbone.patch_embed3.LayerNorm_norm                     [320]      [1, 1024, 320]      640.0         320.0
+72_backbone.block3.0.LayerNorm_norm1                        [320]       [16, 64, 320]      640.0         320.0
+73_backbone.block3.0.attn.Linear_q                     [320, 320]       [16, 64, 320]    102.72k        102.4k
+74_backbone.block3.0.attn.Linear_kv                    [320, 640]       [16, 64, 640]    205.44k        204.8k
+75_backbone.block3.0.attn.Softmax_softmax                       -     [16, 5, 64, 64]          -             -
+76_backbone.block3.0.attn.Dropout_attn_drop                     -     [16, 5, 64, 64]          -             -
+77_backbone.block3.0.attn.Linear_proj                  [320, 320]       [16, 64, 320]    102.72k        102.4k
+78_backbone.block3.0.attn.Dropout_proj_drop                     -       [16, 64, 320]          -             -
+79_backbone.block3.0.DropPath_drop_path                         -       [16, 64, 320]          -             -
+80_backbone.block3.0.LayerNorm_norm2                        [320]      [1, 1024, 320]      640.0         320.0
+81_backbone.block3.0.mlp.Linear_fc1                   [320, 1280]     [1, 1024, 1280]    410.88k        409.6k
+82_backbone.block3.0.mlp.dwconv.Conv2d_dwconv     [1, 1280, 3, 3]   [1, 1280, 32, 32]      12.8k     11.79648M
+83_backbone.block3.0.mlp.GELU_act                               -     [1, 1024, 1280]          -             -
+84_backbone.block3.0.mlp.Dropout_drop                           -     [1, 1024, 1280]          -             -
+85_backbone.block3.0.mlp.Linear_fc2                   [1280, 320]      [1, 1024, 320]    409.92k        409.6k
+86_backbone.block3.0.mlp.Dropout_drop                           -      [1, 1024, 320]          -             -
+87_backbone.block3.0.DropPath_drop_path                         -      [1, 1024, 320]          -             -
+88_backbone.block3.1.LayerNorm_norm1                        [320]       [16, 64, 320]      640.0         320.0
+89_backbone.block3.1.attn.Linear_q                     [320, 320]       [16, 64, 320]    102.72k        102.4k
+90_backbone.block3.1.attn.Linear_kv                    [320, 640]       [16, 64, 640]    205.44k        204.8k
+91_backbone.block3.1.attn.Softmax_softmax                       -     [16, 5, 64, 64]          -             -
+92_backbone.block3.1.attn.Dropout_attn_drop                     -     [16, 5, 64, 64]          -             -
+93_backbone.block3.1.attn.Linear_proj                  [320, 320]       [16, 64, 320]    102.72k        102.4k
+94_backbone.block3.1.attn.Dropout_proj_drop                     -       [16, 64, 320]          -             -
+95_backbone.block3.1.DropPath_drop_path                         -       [16, 64, 320]          -             -
+96_backbone.block3.1.LayerNorm_norm2                        [320]      [1, 1024, 320]      640.0         320.0
+97_backbone.block3.1.mlp.Linear_fc1                   [320, 1280]     [1, 1024, 1280]    410.88k        409.6k
+98_backbone.block3.1.mlp.dwconv.Conv2d_dwconv     [1, 1280, 3, 3]   [1, 1280, 32, 32]      12.8k     11.79648M
+99_backbone.block3.1.mlp.GELU_act                               -     [1, 1024, 1280]          -             -
+100_backbone.block3.1.mlp.Dropout_drop                          -     [1, 1024, 1280]          -             -
+101_backbone.block3.1.mlp.Linear_fc2                  [1280, 320]      [1, 1024, 320]    409.92k        409.6k
+102_backbone.block3.1.mlp.Dropout_drop                          -      [1, 1024, 320]          -             -
+103_backbone.block3.1.DropPath_drop_path                        -      [1, 1024, 320]          -             -
+104_backbone.LayerNorm_norm3                                [320]      [1, 1024, 320]      640.0         320.0
+105_backbone.patch_embed4.Conv2d_proj            [320, 512, 3, 3]    [1, 512, 16, 16]  1.475072M    377.48736M
+106_backbone.patch_embed4.LayerNorm_norm                    [512]       [1, 256, 512]     1.024k         512.0
+107_backbone.block4.0.LayerNorm_norm1                       [512]        [4, 64, 512]     1.024k         512.0
+108_backbone.block4.0.attn.Linear_q                    [512, 512]        [4, 64, 512]   262.656k      262.144k
+109_backbone.block4.0.attn.Linear_kv                  [512, 1024]       [4, 64, 1024]   525.312k      524.288k
+110_backbone.block4.0.attn.Softmax_softmax                      -      [4, 8, 64, 64]          -             -
+111_backbone.block4.0.attn.Dropout_attn_drop                    -      [4, 8, 64, 64]          -             -
+112_backbone.block4.0.attn.Linear_proj                 [512, 512]        [4, 64, 512]   262.656k      262.144k
+113_backbone.block4.0.attn.Dropout_proj_drop                    -        [4, 64, 512]          -             -
+114_backbone.block4.0.DropPath_drop_path                        -        [4, 64, 512]          -             -
+115_backbone.block4.0.LayerNorm_norm2                       [512]       [1, 256, 512]     1.024k         512.0
+116_backbone.block4.0.mlp.Linear_fc1                  [512, 2048]      [1, 256, 2048]  1.050624M     1.048576M
+117_backbone.block4.0.mlp.dwconv.Conv2d_dwconv    [1, 2048, 3, 3]   [1, 2048, 16, 16]     20.48k     4.718592M
+118_backbone.block4.0.mlp.GELU_act                              -      [1, 256, 2048]          -             -
+119_backbone.block4.0.mlp.Dropout_drop                          -      [1, 256, 2048]          -             -
+120_backbone.block4.0.mlp.Linear_fc2                  [2048, 512]       [1, 256, 512]  1.049088M     1.048576M
+121_backbone.block4.0.mlp.Dropout_drop                          -       [1, 256, 512]          -             -
+122_backbone.block4.0.DropPath_drop_path                        -       [1, 256, 512]          -             -
+123_backbone.block4.1.LayerNorm_norm1                       [512]        [4, 64, 512]     1.024k         512.0
+124_backbone.block4.1.attn.Linear_q                    [512, 512]        [4, 64, 512]   262.656k      262.144k
+125_backbone.block4.1.attn.Linear_kv                  [512, 1024]       [4, 64, 1024]   525.312k      524.288k
+126_backbone.block4.1.attn.Softmax_softmax                      -      [4, 8, 64, 64]          -             -
+127_backbone.block4.1.attn.Dropout_attn_drop                    -      [4, 8, 64, 64]          -             -
+128_backbone.block4.1.attn.Linear_proj                 [512, 512]        [4, 64, 512]   262.656k      262.144k
+129_backbone.block4.1.attn.Dropout_proj_drop                    -        [4, 64, 512]          -             -
+130_backbone.block4.1.DropPath_drop_path                        -        [4, 64, 512]          -             -
+131_backbone.block4.1.LayerNorm_norm2                       [512]       [1, 256, 512]     1.024k         512.0
+132_backbone.block4.1.mlp.Linear_fc1                  [512, 2048]      [1, 256, 2048]  1.050624M     1.048576M
+133_backbone.block4.1.mlp.dwconv.Conv2d_dwconv    [1, 2048, 3, 3]   [1, 2048, 16, 16]     20.48k     4.718592M
+134_backbone.block4.1.mlp.GELU_act                              -      [1, 256, 2048]          -             -
+135_backbone.block4.1.mlp.Dropout_drop                          -      [1, 256, 2048]          -             -
+136_backbone.block4.1.mlp.Linear_fc2                  [2048, 512]       [1, 256, 512]  1.049088M     1.048576M
+137_backbone.block4.1.mlp.Dropout_drop                          -       [1, 256, 512]          -             -
+138_backbone.block4.1.DropPath_drop_path                        -       [1, 256, 512]          -             -
+139_backbone.LayerNorm_norm4                                [512]       [1, 256, 512]     1.024k         512.0
+140_decode_head.linear_c4.Linear_proj                  [512, 256]       [1, 256, 256]   131.328k      131.072k
+141_decode_head.linear_c3.Linear_proj                  [320, 256]      [1, 1024, 256]    82.176k        81.92k
+142_decode_head.linear_c2.Linear_proj                  [128, 256]      [1, 4096, 256]    33.024k       32.768k
+143_decode_head.linear_c1.Linear_proj                   [64, 256]     [1, 16384, 256]     16.64k       16.384k
+144_decode_head.linear_fuse.Conv2d_conv         [1024, 256, 1, 1]  [1, 256, 128, 128]   262.144k  4.294967296G
+145_decode_head.linear_fuse.SyncBatchNorm_bn                [256]  [1, 256, 128, 128]      512.0         256.0
+146_decode_head.linear_fuse.ReLU_activate                       -  [1, 256, 128, 128]          -             -
+147_decode_head.Dropout2d_dropout                               -  [1, 256, 128, 128]          -             -
+148_decode_head.Conv2d_linear_pred               [256, 150, 1, 1]  [1, 150, 128, 128]     38.55k     629.1456M
+--------------------------------------------------------------------------------------------------------------
+                            Totals
+Total params             11.84495M
+Trainable params         11.84495M
+Non-trainable params           0.0
+Mult-Adds             6.291003648G
+==============================================================================================================
+---------------------------------------
+
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Identity is not supported!
+[Flops]: Identity is not supported!
+[Memory]: Identity is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Identity is not supported!
+[Flops]: Identity is not supported!
+[Memory]: Identity is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[Flops]: Softmax is not supported!
+[Memory]: Softmax is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: GELU is not supported!
+[Flops]: GELU is not supported!
+[Memory]: GELU is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: Dropout is not supported!
+[Flops]: Dropout is not supported!
+[Memory]: Dropout is not supported!
+[MAdd]: DropPath is not supported!
+[Flops]: DropPath is not supported!
+[Memory]: DropPath is not supported!
+[MAdd]: LayerNorm is not supported!
+[Flops]: LayerNorm is not supported!
+[Memory]: LayerNorm is not supported!
+[MAdd]: SyncBatchNorm is not supported!
+[Flops]: SyncBatchNorm is not supported!
+[Memory]: SyncBatchNorm is not supported!
+[MAdd]: Dropout2d is not supported!
+[Flops]: Dropout2d is not supported!
+[Memory]: Dropout2d is not supported!
+                               module name   input shape  output shape      params memory(MB)              MAdd            Flops  MemRead(B)  MemWrite(B) duration[%]    MemR+W(B)
+0               backbone.patch_embed1.proj     3 512 512    64 128 128      9472.0       4.00     308,281,344.0    155,189,248.0   3183616.0    4194304.0       0.84%    7377920.0
+1               backbone.patch_embed1.norm     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.53%          0.0
+2               backbone.patch_embed2.proj    64 128 128   128  64  64     73856.0       2.00     603,979,776.0    302,514,176.0   4489728.0    2097152.0       0.64%    6586880.0
+3               backbone.patch_embed2.norm      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.42%          0.0
+4               backbone.patch_embed3.proj   128  64  64   320  32  32    368960.0       1.25     754,974,720.0    377,815,040.0   3572992.0    1310720.0       0.57%    4883712.0
+5               backbone.patch_embed3.norm      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.54%          0.0
+6               backbone.patch_embed4.proj   320  32  32   512  16  16   1475072.0       0.50     754,974,720.0    377,618,432.0   7211008.0     524288.0       0.56%    7735296.0
+7               backbone.patch_embed4.norm       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.38%          0.0
+8                  backbone.block1.0.norm1        64  64        64  64       128.0       0.02               0.0              0.0         0.0          0.0       0.34%          0.0
+9           backbone.block1.0.attn.softmax     1  64  64     1  64  64         0.0       0.02          12,287.0              0.0         0.0          0.0       0.25%          0.0
+10                backbone.block1.0.attn.q        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.56%   12648448.0
+11               backbone.block1.0.attn.kv        64  64        64 128      8320.0       0.03          16,256.0      2,097,152.0  12713984.0    8388608.0       0.50%   21102592.0
+12        backbone.block1.0.attn.attn_drop     1  64  64     1  64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.13%          0.0
+13             backbone.block1.0.attn.proj        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.48%   12648448.0
+14        backbone.block1.0.attn.proj_drop        64  64        64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.11%          0.0
+15             backbone.block1.0.drop_path     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.05%          0.0
+16                 backbone.block1.0.norm2     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.31%          0.0
+17               backbone.block1.0.mlp.fc1     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       0.48%   21038080.0
+18     backbone.block1.0.mlp.dwconv.dwconv   256 128 128   256 128 128      2560.0      16.00      75,497,472.0     41,943,040.0  16787456.0   16777216.0       0.46%   33564672.0
+19               backbone.block1.0.mlp.act     16384 256     16384 256         0.0      16.00               0.0              0.0         0.0          0.0       0.23%          0.0
+20               backbone.block1.0.mlp.fc2     16384 256     16384  64     16448.0       4.00          32,704.0         16,384.0  16843008.0    4194304.0       0.48%   21037312.0
+21              backbone.block1.0.mlp.drop     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.11%          0.0
+22                 backbone.block1.1.norm1        64  64        64  64       128.0       0.02               0.0              0.0         0.0          0.0       0.32%          0.0
+23          backbone.block1.1.attn.softmax     1  64  64     1  64  64         0.0       0.02          12,287.0              0.0         0.0          0.0       0.22%          0.0
+24                backbone.block1.1.attn.q        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.47%   12648448.0
+25               backbone.block1.1.attn.kv        64  64        64 128      8320.0       0.03          16,256.0      2,097,152.0  12713984.0    8388608.0       0.46%   21102592.0
+26        backbone.block1.1.attn.attn_drop     1  64  64     1  64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.11%          0.0
+27             backbone.block1.1.attn.proj        64  64        64  64      4160.0       0.02           8,128.0      1,048,576.0   8454144.0    4194304.0       0.46%   12648448.0
+28        backbone.block1.1.attn.proj_drop        64  64        64  64         0.0       0.02               0.0              0.0         0.0          0.0       0.10%          0.0
+29             backbone.block1.1.drop_path     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.06%          0.0
+30                 backbone.block1.1.norm2     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.32%          0.0
+31               backbone.block1.1.mlp.fc1     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       0.47%   21038080.0
+32     backbone.block1.1.mlp.dwconv.dwconv   256 128 128   256 128 128      2560.0      16.00      75,497,472.0     41,943,040.0  16787456.0   16777216.0       0.43%   33564672.0
+33               backbone.block1.1.mlp.act     16384 256     16384 256         0.0      16.00               0.0              0.0         0.0          0.0       0.22%          0.0
+34               backbone.block1.1.mlp.fc2     16384 256     16384  64     16448.0       4.00          32,704.0         16,384.0  16843008.0    4194304.0       0.49%   21037312.0
+35              backbone.block1.1.mlp.drop     16384  64     16384  64         0.0       4.00               0.0              0.0         0.0          0.0       0.10%          0.0
+36                          backbone.norm1     16384  64     16384  64       128.0       4.00               0.0              0.0         0.0          0.0       0.30%          0.0
+37                 backbone.block2.0.norm1        64 128        64 128       256.0       0.03               0.0              0.0         0.0          0.0       0.31%          0.0
+38          backbone.block2.0.attn.softmax     2  64  64     2  64  64         0.0       0.03          24,575.0              0.0         0.0          0.0       0.21%          0.0
+39                backbone.block2.0.attn.q        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.49%    8421376.0
+40               backbone.block2.0.attn.kv        64 128        64 256     33024.0       0.06          65,280.0      2,097,152.0  10551296.0    4194304.0       0.49%   14745600.0
+41        backbone.block2.0.attn.attn_drop     2  64  64     2  64  64         0.0       0.03               0.0              0.0         0.0          0.0       0.10%          0.0
+42             backbone.block2.0.attn.proj        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.46%    8421376.0
+43        backbone.block2.0.attn.proj_drop        64 128        64 128         0.0       0.03               0.0              0.0         0.0          0.0       0.10%          0.0
+44             backbone.block2.0.drop_path      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.05%          0.0
+45                 backbone.block2.0.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.31%          0.0
+46               backbone.block2.0.mlp.fc1      4096 128      4096 512     66048.0       8.00         130,560.0         65,536.0   2361344.0    8388608.0       0.46%   10749952.0
+47     backbone.block2.0.mlp.dwconv.dwconv   512  64  64   512  64  64      5120.0       8.00      37,748,736.0     20,971,520.0   8409088.0    8388608.0       0.42%   16797696.0
+48               backbone.block2.0.mlp.act      4096 512      4096 512         0.0       8.00               0.0              0.0         0.0          0.0       0.21%          0.0
+49               backbone.block2.0.mlp.fc2      4096 512      4096 128     65664.0       2.00         130,944.0         65,536.0   8651264.0    2097152.0       0.56%   10748416.0
+50              backbone.block2.0.mlp.drop      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.10%          0.0
+51                 backbone.block2.1.norm1        64 128        64 128       256.0       0.03               0.0              0.0         0.0          0.0       0.30%          0.0
+52          backbone.block2.1.attn.softmax     2  64  64     2  64  64         0.0       0.03          24,575.0              0.0         0.0          0.0       0.22%          0.0
+53                backbone.block2.1.attn.q        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.46%    8421376.0
+54               backbone.block2.1.attn.kv        64 128        64 256     33024.0       0.06          65,280.0      2,097,152.0  10551296.0    4194304.0       0.46%   14745600.0
+55        backbone.block2.1.attn.attn_drop     2  64  64     2  64  64         0.0       0.03               0.0              0.0         0.0          0.0       0.10%          0.0
+56             backbone.block2.1.attn.proj        64 128        64 128     16512.0       0.03          32,640.0      1,048,576.0   6324224.0    2097152.0       0.46%    8421376.0
+57        backbone.block2.1.attn.proj_drop        64 128        64 128         0.0       0.03               0.0              0.0         0.0          0.0       0.10%          0.0
+58             backbone.block2.1.drop_path      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.05%          0.0
+59                 backbone.block2.1.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.30%          0.0
+60               backbone.block2.1.mlp.fc1      4096 128      4096 512     66048.0       8.00         130,560.0         65,536.0   2361344.0    8388608.0       0.47%   10749952.0
+61     backbone.block2.1.mlp.dwconv.dwconv   512  64  64   512  64  64      5120.0       8.00      37,748,736.0     20,971,520.0   8409088.0    8388608.0       0.43%   16797696.0
+62               backbone.block2.1.mlp.act      4096 512      4096 512         0.0       8.00               0.0              0.0         0.0          0.0       0.21%          0.0
+63               backbone.block2.1.mlp.fc2      4096 512      4096 128     65664.0       2.00         130,944.0         65,536.0   8651264.0    2097152.0       0.55%   10748416.0
+64              backbone.block2.1.mlp.drop      4096 128      4096 128         0.0       2.00               0.0              0.0         0.0          0.0       0.11%          0.0
+65                          backbone.norm2      4096 128      4096 128       256.0       2.00               0.0              0.0         0.0          0.0       0.32%          0.0
+66                 backbone.block3.0.norm1        64 320        64 320       640.0       0.08               0.0              0.0         0.0          0.0       0.29%          0.0
+67          backbone.block3.0.attn.softmax     5  64  64     5  64  64         0.0       0.08          61,439.0              0.0         0.0          0.0       0.22%          0.0
+68                backbone.block3.0.attn.q        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.52%    9195520.0
+69               backbone.block3.0.attn.kv        64 320        64 640    205440.0       0.16         408,960.0      3,276,800.0  14458880.0    2621440.0       0.51%   17080320.0
+70        backbone.block3.0.attn.attn_drop     5  64  64     5  64  64         0.0       0.08               0.0              0.0         0.0          0.0       0.10%          0.0
+71             backbone.block3.0.attn.proj        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.52%    9195520.0
+72        backbone.block3.0.attn.proj_drop        64 320        64 320         0.0       0.08               0.0              0.0         0.0          0.0       0.10%          0.0
+73             backbone.block3.0.drop_path      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.05%          0.0
+74                 backbone.block3.0.norm2      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.31%          0.0
+75               backbone.block3.0.mlp.fc1      1024 320     1024 1280    410880.0       5.00         817,920.0        409,600.0   2954240.0    5242880.0       0.48%    8197120.0
+76     backbone.block3.0.mlp.dwconv.dwconv  1280  32  32  1280  32  32     12800.0       5.00      23,592,960.0     13,107,200.0   5294080.0    5242880.0       0.44%   10536960.0
+77               backbone.block3.0.mlp.act     1024 1280     1024 1280         0.0       5.00               0.0              0.0         0.0          0.0       0.22%          0.0
+78               backbone.block3.0.mlp.fc2     1024 1280      1024 320    409920.0       1.25         818,880.0        409,600.0   6882560.0    1310720.0       0.54%    8193280.0
+79              backbone.block3.0.mlp.drop      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.10%          0.0
+80                 backbone.block3.1.norm1        64 320        64 320       640.0       0.08               0.0              0.0         0.0          0.0       0.29%          0.0
+81          backbone.block3.1.attn.softmax     5  64  64     5  64  64         0.0       0.08          61,439.0              0.0         0.0          0.0       0.22%          0.0
+82                backbone.block3.1.attn.q        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.51%    9195520.0
+83               backbone.block3.1.attn.kv        64 320        64 640    205440.0       0.16         408,960.0      3,276,800.0  14458880.0    2621440.0       0.50%   17080320.0
+84        backbone.block3.1.attn.attn_drop     5  64  64     5  64  64         0.0       0.08               0.0              0.0         0.0          0.0       0.10%          0.0
+85             backbone.block3.1.attn.proj        64 320        64 320    102720.0       0.08         204,480.0      1,638,400.0   7884800.0    1310720.0       0.52%    9195520.0
+86        backbone.block3.1.attn.proj_drop        64 320        64 320         0.0       0.08               0.0              0.0         0.0          0.0       0.10%          0.0
+87             backbone.block3.1.drop_path      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.05%          0.0
+88                 backbone.block3.1.norm2      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.31%          0.0
+89               backbone.block3.1.mlp.fc1      1024 320     1024 1280    410880.0       5.00         817,920.0        409,600.0   2954240.0    5242880.0       0.48%    8197120.0
+90     backbone.block3.1.mlp.dwconv.dwconv  1280  32  32  1280  32  32     12800.0       5.00      23,592,960.0     13,107,200.0   5294080.0    5242880.0       6.36%   10536960.0
+91               backbone.block3.1.mlp.act     1024 1280     1024 1280         0.0       5.00               0.0              0.0         0.0          0.0       0.22%          0.0
+92               backbone.block3.1.mlp.fc2     1024 1280      1024 320    409920.0       1.25         818,880.0        409,600.0   6882560.0    1310720.0       0.53%    8193280.0
+93              backbone.block3.1.mlp.drop      1024 320      1024 320         0.0       1.25               0.0              0.0         0.0          0.0       0.10%          0.0
+94                          backbone.norm3      1024 320      1024 320       640.0       1.25               0.0              0.0         0.0          0.0       0.32%          0.0
+95                 backbone.block4.0.norm1        64 512        64 512      1024.0       0.12               0.0              0.0         0.0          0.0       0.35%          0.0
+96          backbone.block4.0.attn.softmax     8  64  64     8  64  64         0.0       0.12          98,303.0              0.0         0.0          0.0       0.20%          0.0
+97                backbone.block4.0.attn.q        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.50%    5251072.0
+98               backbone.block4.0.attn.kv        64 512       64 1024    525312.0       0.25       1,047,552.0      2,097,152.0   8929280.0    1048576.0       0.48%    9977856.0
+99        backbone.block4.0.attn.attn_drop     8  64  64     8  64  64         0.0       0.12               0.0              0.0         0.0          0.0       0.09%          0.0
+100            backbone.block4.0.attn.proj        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.50%    5251072.0
+101       backbone.block4.0.attn.proj_drop        64 512        64 512         0.0       0.12               0.0              0.0         0.0          0.0       0.09%          0.0
+102            backbone.block4.0.drop_path       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.04%          0.0
+103                backbone.block4.0.norm2       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.28%          0.0
+104              backbone.block4.0.mlp.fc1       256 512      256 2048   1050624.0       2.00       2,095,104.0      1,048,576.0   4726784.0    2097152.0       0.49%    6823936.0
+105    backbone.block4.0.mlp.dwconv.dwconv  2048  16  16  2048  16  16     20480.0       2.00       9,437,184.0      5,242,880.0   2179072.0    2097152.0       0.43%    4276224.0
+106              backbone.block4.0.mlp.act      256 2048      256 2048         0.0       2.00               0.0              0.0         0.0          0.0       0.21%          0.0
+107              backbone.block4.0.mlp.fc2      256 2048       256 512   1049088.0       0.50       2,096,640.0      1,048,576.0   6293504.0     524288.0       0.54%    6817792.0
+108             backbone.block4.0.mlp.drop       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.09%          0.0
+109                backbone.block4.1.norm1        64 512        64 512      1024.0       0.12               0.0              0.0         0.0          0.0       0.28%          0.0
+110         backbone.block4.1.attn.softmax     8  64  64     8  64  64         0.0       0.12          98,303.0              0.0         0.0          0.0       0.20%          0.0
+111               backbone.block4.1.attn.q        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       6.82%    5251072.0
+112              backbone.block4.1.attn.kv        64 512       64 1024    525312.0       0.25       1,047,552.0      2,097,152.0   8929280.0    1048576.0       0.54%    9977856.0
+113       backbone.block4.1.attn.attn_drop     8  64  64     8  64  64         0.0       0.12               0.0              0.0         0.0          0.0       0.09%          0.0
+114            backbone.block4.1.attn.proj        64 512        64 512    262656.0       0.12         523,776.0      1,048,576.0   4726784.0     524288.0       0.50%    5251072.0
+115       backbone.block4.1.attn.proj_drop        64 512        64 512         0.0       0.12               0.0              0.0         0.0          0.0       0.09%          0.0
+116            backbone.block4.1.drop_path       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.04%          0.0
+117                backbone.block4.1.norm2       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.28%          0.0
+118              backbone.block4.1.mlp.fc1       256 512      256 2048   1050624.0       2.00       2,095,104.0      1,048,576.0   4726784.0    2097152.0       0.50%    6823936.0
+119    backbone.block4.1.mlp.dwconv.dwconv  2048  16  16  2048  16  16     20480.0       2.00       9,437,184.0      5,242,880.0   2179072.0    2097152.0       0.43%    4276224.0
+120              backbone.block4.1.mlp.act      256 2048      256 2048         0.0       2.00               0.0              0.0         0.0          0.0       0.22%          0.0
+121              backbone.block4.1.mlp.fc2      256 2048       256 512   1049088.0       0.50       2,096,640.0      1,048,576.0   6293504.0     524288.0       0.54%    6817792.0
+122             backbone.block4.1.mlp.drop       256 512       256 512         0.0       0.50               0.0              0.0         0.0          0.0       0.09%          0.0
+123                         backbone.norm4       256 512       256 512      1024.0       0.50               0.0              0.0         0.0          0.0       0.27%          0.0
+124                decode_head.loss_decode     0   0   0     0   0   0         0.0       0.00               0.0              0.0         0.0          0.0       0.00%          0.0
+125                   decode_head.conv_seg     0   0   0     0   0   0         0.0       0.00               0.0              0.0         0.0          0.0       0.00%          0.0
+126                    decode_head.dropout   256 128 128   256 128 128         0.0      16.00               0.0              0.0         0.0          0.0       0.13%          0.0
+127             decode_head.linear_c4.proj       256 512       256 256    131328.0       0.25         261,888.0        131,072.0   1049600.0     262144.0       0.57%    1311744.0
+128             decode_head.linear_c3.proj      1024 320      1024 256     82176.0       1.00         163,584.0         81,920.0   1639424.0    1048576.0       0.61%    2688000.0
+129             decode_head.linear_c2.proj      4096 128      4096 256     33024.0       4.00          65,280.0         32,768.0   2229248.0    4194304.0       6.31%    6423552.0
+130             decode_head.linear_c1.proj     16384  64     16384 256     16640.0      16.00          32,512.0         16,384.0   4260864.0   16777216.0       7.18%   21038080.0
+131           decode_head.linear_fuse.conv  1024 128 128   256 128 128    262144.0      16.00   8,585,740,288.0  4,294,967,296.0  68157440.0   16777216.0      17.99%   84934656.0
+132             decode_head.linear_fuse.bn   256 128 128   256 128 128       512.0      16.00               0.0              0.0         0.0          0.0      13.68%          0.0
+133       decode_head.linear_fuse.activate   256 128 128   256 128 128         0.0      16.00       4,194,304.0      4,194,304.0  16777216.0   16777216.0       0.38%   33554432.0
+134                decode_head.linear_pred   256 128 128   150 128 128     38550.0       9.38   1,258,291,200.0    631,603,200.0  16931416.0    9830400.0       0.65%   26761816.0
+total                                                                   11844950.0     369.88  12,582,368,248.0  6,351,126,528.0  16931416.0    9830400.0     100.00%  788737368.0
+==================================================================================================================================================================================
+Total params: 11,844,950
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total memory: 369.88MB
+Total MAdd: 12.58GMAdd
+Total Flops: 6.35GFlops
+Total MemR+W: 752.2MB
+

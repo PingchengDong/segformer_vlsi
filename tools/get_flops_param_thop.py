@@ -1,11 +1,13 @@
 import argparse
-
+from thop import profile
+from thop import clever_format
 from mmcv import Config
 # from mmcv.cnn import get_model_complexity_info
 # from mmcv.cnn.utils.flops_counter import flops_to_string, params_to_string
 from torchsummaryX import summary
 from torchstat import stat
 from mmseg.models import build_segmentor
+from ptflops import get_model_complexity_info
 import torch
 
 
@@ -14,12 +16,12 @@ def parse_args():
     parser.add_argument(
         'config',
         help='train config file path')
-    parser.add_argument(
-        '--shape',
-        type=int,
-        nargs='+',
-        default=[512, 512],
-        help='input image size')
+    # parser.add_argument(
+    #     '--shape',
+    #     type=int,
+    #     nargs='+',
+    #     default=[512, 512],
+    #     help='input image size')
     args = parser.parse_args()
     return args
 
@@ -73,12 +75,12 @@ def main():
 
     args = parse_args()
 
-    if len(args.shape) == 1:
-        input_shape = (1, 3, args.shape[0], args.shape[0])
-    elif len(args.shape) == 2:
-        input_shape = (1, 3, ) + tuple(args.shape)
-    else:
-        raise ValueError('invalid input shape')
+    # if len(args.shape) == 1:
+        # input_shape = (1, 3, args.shape[0], args.shape[0])
+    # elif len(args.shape) == 2:
+        # input_shape = (3, ) + tuple(args.shape)
+    # else:
+        # raise ValueError('invalid input shape')
 
     cfg = Config.fromfile(args.config)
     #cfg = Config.fromfile('~/anaconda3/access/segformer/SegFormer/local_configs/segformer_maxvit/B1/segformer.b1_maxvit_8winsize.512x512.ade.160k.py')
@@ -96,9 +98,17 @@ def main():
             'FLOPs counter is currently not currently supported with {}'.
             format(model.__class__.__name__))
 
-
+    model(torch.randn(1,3,512,512).cuda())
     # print(model)
-    summary(model, torch.zeros(input_shape).cuda())
+    #input = torch.randn(1, 3, 512, 512).cuda()
+    #macs, params = profile(model, inputs=(input,))
+    #macs, params = clever_format([macs, params], "%.3f")
+    #print(macs)
+    #summary(model, torch.zeros((1,)+input_shape).cuda())
+    #stat(model, input_size=input_shape)
+    #macs,params=get_model_complexity_info(model,input_shape,as_strings=True,print_per_layer_stat=True,verbose=True)
+    #print('{:<30}  {:<8}'.format('Computational complexity: ', macs))
+    #print('{:<30}  {:<8}'.format('Number of parameters: ', params))
     # if hasattr(model, 'forward_dummy'):
     #     model.forward = model.forward_dummy
     # else:

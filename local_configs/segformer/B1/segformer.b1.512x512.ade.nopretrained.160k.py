@@ -10,9 +10,9 @@ norm_cfg = dict(type='SyncBN', requires_grad=True)
 find_unused_parameters = True
 model = dict(
     type='EncoderDecoder',
-    pretrained='pretrained/mit_b1.pth',
+    #pretrained='pretrained/mit_b1.pth',
     backbone=dict(
-        type='b1_maxvit_16size',
+        type='mit_b1',
         style='pytorch'),
     decode_head=dict(
         type='SegFormerHead',
@@ -44,5 +44,5 @@ lr_config = dict(_delete_=True, policy='poly',
                  power=1.0, min_lr=0.0, by_epoch=False)
 
 
-data = dict(samples_per_gpu=8)
+data = dict(samples_per_gpu=3)
 evaluation = dict(interval=2000, metric='mIoU')

@@ -16,6 +16,7 @@ from mmseg.utils import get_root_logger
 from mmcv.runner import load_checkpoint
 import math
 
+summary_mode = True
 class Mlp(nn.Module):
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0., cur=0):
         super().__init__()
@@ -45,10 +46,17 @@ class Mlp(nn.Module):
             if m.bias is not None:
                 m.bias.data.zero_()
                 
+    def get_flops(self,N,C):
+        # LayerNorm
+        print(f"Block{self.cur}.Attention.layernorm_2 {N*C*2} {C*2}")
+        print(f"Block{self.cur}.Attention.mlp_1 {N*(self.in_features*self.hidden_features+self.hidden_features)} {(self.in_features+1)*self.hidden_features}")
+        print(f"Block{self.cur}.Attention.mlp_2 {N*(self.out_features*self.hidden_features+self.out_features)} {(self.hidden_features+1)*self.out_features}")
     
         
     def forward(self, x, H, W):
         B,N,C = x.shape
+        if summary_mode:
+            self.get_flops(N,C)
         x = self.fc1(x)
         x = self.dwconv(x, H, W)
         x = self.act(x)
@@ -93,9 +101,27 @@ class Attention(nn.Module):
             if m.bias is not None:
                 m.bias.data.zero_()
     
+    def get_flops(self,N,C):
+        # LayerNorm
+        print(f"Block{self.cur}.Attention.layernorm_1 {N*C*2} {C*2}")
+        # q/k/v
+        print(f"Block{self.cur}.Attention.linear_q {N*(C*C+C)} {C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_k {N*(C*C+C)} {C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_v {N*(C*C+C)} {C*C+C}")
+        # Attn
+        print(f"Block{self.cur}.Attention.q*k {N*C*N} 0")
+        # Softmax
+        print(f"Block{self.cur}.Attention.softmax {N*N*3} 0")
+        # Attn*v
+        print(f"Block{self.cur}.Attention.attn*v {N*N*C} 0")
+        # Out Proj
+        print(f"Block{self.cur}.Attention.linear_out {N*(C*C+C)} {C*C+C}")
+         
     
     def forward(self, x, H, W):
         B, N, C = x.shape
+        if summary_mode:
+            self.get_flops(N,C) 
         q = self.q(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3) # B, HW/P^2, HW, C_head
         kv = self.kv(x).reshape(B, -1, 2, self.num_heads, C // self.num_heads).permute(2, 0, 3, 1, 4)
         k, v = kv[0], kv[1]
@@ -145,8 +171,13 @@ class Block(nn.Module):
             if m.bias is not None:
                 m.bias.data.zero_()
 
+    def get_flops(self,H,W):
+        print(f"Block{self.cur}.shotcut_1 {H*W} 0")
+        print(f"Block{self.cur}.shotcut_2 {H*W} 0")
         
     def forward(self, x, H, W):
+        if summary_mode:
+            self.get_flops(H,W)
         x = x + self.drop_path(self.attn(self.norm1(x), H, W))
         x = x + self.drop_path(self.mlp(self.norm2(x), H, W))
 
@@ -189,6 +220,11 @@ class OverlapPatchEmbed(nn.Module):
             if m.bias is not None:
                 m.bias.data.zero_()
     
+    def get_flops(self,H,W,N):
+        # LayerNorm
+        print(f"Block{self.cur}.Patchembed.layernorm_1 {H*W*self.Cin*2} {self.Cin*2}")
+        print(f"Block{self.cur}.Patchembed.convolution {(self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb)*H*W} {self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb}")
+        print(f"Block{self.cur}.Patchembed.layernorm_2 {N*self.Cemb*2} {self.Cemb*2}")
         
     def forward(self, x):
         x = self.proj(x)
@@ -196,6 +232,8 @@ class OverlapPatchEmbed(nn.Module):
         x = x.flatten(2).transpose(1, 2)
         _,N,_ = x.shape
         x = self.norm(x)
+        if summary_mode:
+            self.get_flops(H,W,N)
         return x, H, W
 
 
@@ -361,10 +399,14 @@ class DWConv(nn.Module):
         self.C = dim
         self.dwconv = nn.Conv2d(dim, dim, 3, 1, 1, bias=True, groups=dim)
     
+    def get_flops(self,H,W):
+        print(f"Block{self.cur}.mlp.convolution_DW {(3*3*self.C+self.C)*H*W} {3*3*self.C+self.C}")
         
     def forward(self, x, H, W):
         B, N, C = x.shape
         x = x.transpose(1, 2).view(B, C, H, W)
+        if summary_mode:
+            self.get_flops(H,W)
         x = self.dwconv(x)
         x = x.flatten(2).transpose(1, 2)
 
