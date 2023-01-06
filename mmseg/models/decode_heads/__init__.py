@@ -23,7 +23,7 @@ from .uper_head import UPerHead
 from .segformer_head_tt import SegFormerHead_TT
 from .segformer_head import SegFormerHead
 from .segformer_head_flop import SegFormerHead_Flop
-
+from .segformer_head_hardware import *
 __all__ = [
     'FCNHead', 'PSPHead', 'ASPPHead', 'PSAHead', 'NLHead', 'GCHead', 'CCHead',
     'UPerHead', 'DepthwiseSeparableASPPHead', 'ANNHead', 'DAHead', 'OCRHead',
