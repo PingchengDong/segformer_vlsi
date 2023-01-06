@@ -55,8 +55,20 @@ class SegFormerHead_hardware(BaseDecodeHead):
         self.linear_c3 = MLP(input_dim=c3_in_channels, embed_dim=embedding_dim, cur=2)
         self.linear_c2 = MLP(input_dim=c2_in_channels, embed_dim=embedding_dim, cur=3)
         self.linear_c1 = MLP(input_dim=c1_in_channels, embed_dim=embedding_dim, cur=4)
-
-        self.linear_fuse = ConvModule(
+        
+        self.linear_fuse_1= ConvModule(
+            in_channels=embedding_dim*2,
+            out_channels=embedding_dim,
+            kernel_size=1,
+            norm_cfg=dict(type='SyncBN', requires_grad=True)
+        )
+        self.linear_fuse_2= ConvModule(
+            in_channels=embedding_dim*2,
+            out_channels=embedding_dim,
+            kernel_size=1,
+            norm_cfg=dict(type='SyncBN', requires_grad=True)
+        )
+        self.linear_fuse_3= ConvModule(
             in_channels=embedding_dim*2,
             out_channels=embedding_dim,
             kernel_size=1,
@@ -83,10 +95,10 @@ class SegFormerHead_hardware(BaseDecodeHead):
         _c2 = resize(_c2, size=c1.size()[2:],mode='bilinear',align_corners=False)
 
         _c1 = self.linear_c1(c1).permute(0,2,1).reshape(n, -1, c1.shape[2], c1.shape[3])
-        c_s1 = self.linear_fuse(torch.cat([_c1,_c2], dim=1))
-        c_s2 = self.linear_fuse(torch.cat([c_s1,_c3], dim=1))
-        c_s3 = self.linear_fuse(torch.cat([c_s2,_c4], dim=1)) 
-        # _c = self.linear_fuse(torch.cat([_c4, _c3, _c2, _c1], dim=1))
+        c_s1 = self.linear_fuse_1(torch.cat([_c1,_c2], dim=1))
+        c_s2 = self.linear_fuse_2(torch.cat([c_s1,_c3], dim=1))
+        c_s3 = self.linear_fuse_3(torch.cat([c_s2,_c4], dim=1)) 
+        #_c = self.linear_fuse_3(torch.cat([_c4, _c3, _c2, _c1], dim=1))
         
         
         x = self.dropout(c_s3)
