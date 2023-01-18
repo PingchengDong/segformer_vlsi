@@ -48,9 +48,9 @@ class Mlp(nn.Module):
                 
     def get_flops(self,N,C):
         # LayerNorm
-        print(f"Block{self.cur}.Attention.layernorm_2 {N*C*2} {C*2}")
-        print(f"Block{self.cur}.Attention.mlp_1 {N*(self.in_features*self.hidden_features+self.hidden_features)} {(self.in_features+1)*self.hidden_features}")
-        print(f"Block{self.cur}.Attention.mlp_2 {N*(self.out_features*self.hidden_features+self.out_features)} {(self.hidden_features+1)*self.out_features}")
+        print(f"Block{self.cur}.Attention.layernorm_2,{N*C*2},{C*2}")
+        print(f"Block{self.cur}.Attention.mlp_1,{N*(self.in_features*self.hidden_features+self.hidden_features)},{(self.in_features+1)*self.hidden_features}")
+        print(f"Block{self.cur}.Attention.mlp_2,{N*(self.out_features*self.hidden_features+self.out_features)},{(self.hidden_features+1)*self.out_features}")
     
         
     def forward(self, x, H, W):
@@ -103,19 +103,19 @@ class Attention(nn.Module):
     
     def get_flops(self,N,C):
         # LayerNorm
-        print(f"Block{self.cur}.Attention.layernorm_1 {N*C*2} {C*2}")
+        print(f"Block{self.cur}.Attention.layernorm_1,{N*C*2},{C*2}")
         # q/k/v
-        print(f"Block{self.cur}.Attention.linear_q {N*(C*C+C)} {C*C+C}")
-        print(f"Block{self.cur}.Attention.linear_k {N*(C*C+C)} {C*C+C}")
-        print(f"Block{self.cur}.Attention.linear_v {N*(C*C+C)} {C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_q,{N*(C*C+C)},{C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_k,{N*(C*C+C)},{C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_v,{N*(C*C+C)},{C*C+C}")
         # Attn
-        print(f"Block{self.cur}.Attention.q*k {N*C*N} 0")
+        print(f"Block{self.cur}.Attention.q*k,{N*C*N},0")
         # Softmax
-        print(f"Block{self.cur}.Attention.softmax {N*N*3} 0")
+        print(f"Block{self.cur}.Attention.softmax,{N*N*3},0")
         # Attn*v
-        print(f"Block{self.cur}.Attention.attn*v {N*N*C} 0")
+        print(f"Block{self.cur}.Attention.attn*v,{N*N*C},0")
         # Out Proj
-        print(f"Block{self.cur}.Attention.linear_out {N*(C*C+C)} {C*C+C}")
+        print(f"Block{self.cur}.Attention.linear_out,{N*(C*C+C)},{C*C+C}")
          
     
     def forward(self, x, H, W):
@@ -172,8 +172,8 @@ class Block(nn.Module):
                 m.bias.data.zero_()
 
     def get_flops(self,H,W):
-        print(f"Block{self.cur}.shotcut_1 {H*W} 0")
-        print(f"Block{self.cur}.shotcut_2 {H*W} 0")
+        print(f"Block{self.cur}.shotcut_1,{H*W},0")
+        print(f"Block{self.cur}.shotcut_2,{H*W},0")
         
     def forward(self, x, H, W):
         if summary_mode:
@@ -222,9 +222,9 @@ class OverlapPatchEmbed(nn.Module):
     
     def get_flops(self,H,W,N):
         # LayerNorm
-        print(f"Block{self.cur}.Patchembed.layernorm_1 {H*W*self.Cin*2} {self.Cin*2}")
-        print(f"Block{self.cur}.Patchembed.convolution {(self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb)*H*W} {self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb}")
-        print(f"Block{self.cur}.Patchembed.layernorm_2 {N*self.Cemb*2} {self.Cemb*2}")
+        print(f"Block{self.cur}.Patchembed.layernorm_1,{H*W*self.Cin*2},{self.Cin*2}")
+        print(f"Block{self.cur}.Patchembed.convolution,{(self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb)*H*W},{self.patch_size[0]*self.patch_size[1]*self.Cin*self.Cemb+self.Cemb}")
+        print(f"Block{self.cur}.Patchembed.layernorm_2,{N*self.Cemb*2},{self.Cemb*2}")
         
     def forward(self, x):
         x = self.proj(x)
@@ -400,7 +400,7 @@ class DWConv(nn.Module):
         self.dwconv = nn.Conv2d(dim, dim, 3, 1, 1, bias=True, groups=dim)
     
     def get_flops(self,H,W):
-        print(f"Block{self.cur}.mlp.convolution_DW {(3*3*self.C+self.C)*H*W} {3*3*self.C+self.C}")
+        print(f"Block{self.cur}.mlp.convolution_DW,{(3*3*self.C+self.C)*H*W},{3*3*self.C+self.C}")
         
     def forward(self, x, H, W):
         B, N, C = x.shape
@@ -415,54 +415,54 @@ class DWConv(nn.Module):
 
 
 @BACKBONES.register_module()
-class mit_b0(MixVisionTransformer):
+class flop_mit_b0(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b0, self).__init__(
+        super(flop_mit_b0, self).__init__(
             patch_size=4, embed_dims=[32, 64, 160, 256], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
 
 
 @BACKBONES.register_module()
-class mit_b1(MixVisionTransformer):
+class flop_mit_b1(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b1, self).__init__(
+        super(flop_mit_b1, self).__init__(
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
 
 
 @BACKBONES.register_module()
-class mit_b2(MixVisionTransformer):
+class flop_mit_b2(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b2, self).__init__(
+        super(flop_mit_b2, self).__init__(
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 4, 6, 3], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
 
 
 @BACKBONES.register_module()
-class mit_b3(MixVisionTransformer):
+class flop_mit_b3(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b3, self).__init__(
+        super(flop_mit_b3, self).__init__(
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 4, 18, 3], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
 
 
 @BACKBONES.register_module()
-class mit_b4(MixVisionTransformer):
+class flop_mit_b4(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b4, self).__init__(
+        super(flop_mit_b4, self).__init__(
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 8, 27, 3], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
 
 
 @BACKBONES.register_module()
-class mit_b5(MixVisionTransformer):
+class flop_mit_b5(MixVisionTransformer):
     def __init__(self, **kwargs):
-        super(mit_b5, self).__init__(
+        super(flop_mit_b5, self).__init__(
             patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[4, 4, 4, 4],
             qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 6, 40, 3], sr_ratios=[8, 4, 2, 1],
             drop_rate=0.0, drop_path_rate=0.1)
