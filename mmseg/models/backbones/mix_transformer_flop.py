@@ -20,13 +20,16 @@ summary_mode = True
 class Mlp(nn.Module):
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0., cur=0):
         super().__init__()
-        self.in_features = in_features
-        self.out_features = out_features or in_features
-        self.hidden_features = hidden_features or in_features
-        self.fc1 = nn.Linear(self.in_features, self.hidden_features)
-        self.dwconv = DWConv(self.hidden_features,cur=cur)
+        in_features = in_features
+        out_features = out_features or in_features
+        self.Cin = in_features
+        self.Cout = out_features
+        self.Cemb = hidden_features
+        hidden_features = hidden_features or in_features
+        self.fc1 = nn.Linear(in_features, hidden_features)
+        self.dwconv = DWConv(hidden_features,cur=cur)
         self.act = act_layer()
-        self.fc2 = nn.Linear(self.hidden_features, self.out_features)
+        self.fc2 = nn.Linear(hidden_features, out_features)
         self.drop = nn.Dropout(drop)
         self.cur = cur
         self.apply(self._init_weights)
@@ -49,8 +52,8 @@ class Mlp(nn.Module):
     def get_flops(self,N,C):
         # LayerNorm
         print(f"Block{self.cur}.Attention.layernorm_2,{N*C*2},{C*2}")
-        print(f"Block{self.cur}.Attention.mlp_1,{N*(self.in_features*self.hidden_features+self.hidden_features)},{(self.in_features+1)*self.hidden_features}")
-        print(f"Block{self.cur}.Attention.mlp_2,{N*(self.out_features*self.hidden_features+self.out_features)},{(self.hidden_features+1)*self.out_features}")
+        print(f"Block{self.cur}.Attention.mlp_1,{N*(self.Cin*self.Cemb+self.Cemb)},{(self.Cin+1)*self.Cemb}")
+        print(f"Block{self.cur}.Attention.mlp_2,{N*(self.Cout*self.Cemb+self.Cout)},{(self.Cemb+1)*self.Cout}")
     
         
     def forward(self, x, H, W):
